@@ -1,0 +1,972 @@
+rule_set,category,rule_id,description
+OWASP_3.2,General,200002,Failed to Parse Request Body.
+OWASP_3.2,General,200003,Multipart Request Body Strict Validation.
+OWASP_3.2,General,200004,Possible Multipart Unmatched Boundary.
+OWASP_3.2,REQUEST-911-METHOD-ENFORCEMENT,911100,Method is not allowed by policy
+OWASP_3.2,REQUEST-913-SCANNER-DETECTION,913100,Found User-Agent associated with security scanner
+OWASP_3.2,REQUEST-913-SCANNER-DETECTION,913101,Found User-Agent associated with scripting/generic HTTP client
+OWASP_3.2,REQUEST-913-SCANNER-DETECTION,913102,Found User-Agent associated with web crawler/bot
+OWASP_3.2,REQUEST-913-SCANNER-DETECTION,913110,Found request header associated with security scanner
+OWASP_3.2,REQUEST-913-SCANNER-DETECTION,913120,Found request filename/argument associated with security scanner
+OWASP_3.2,REQUEST-920-PROTOCOL-ENFORCEMENT,920100,Invalid HTTP Request Line
+OWASP_3.2,REQUEST-920-PROTOCOL-ENFORCEMENT,920120,Attempted multipart/form-data bypass
+OWASP_3.2,REQUEST-920-PROTOCOL-ENFORCEMENT,920121,Attempted multipart/form-data bypass
+OWASP_3.2,REQUEST-920-PROTOCOL-ENFORCEMENT,920160,Content-Length HTTP header is not numeric.
+OWASP_3.2,REQUEST-920-PROTOCOL-ENFORCEMENT,920170,GET or HEAD Request with Body Content.
+OWASP_3.2,REQUEST-920-PROTOCOL-ENFORCEMENT,920171,GET or HEAD Request with Transfer-Encoding.
+OWASP_3.2,REQUEST-920-PROTOCOL-ENFORCEMENT,920180,POST request missing Content-Length Header.
+OWASP_3.2,REQUEST-920-PROTOCOL-ENFORCEMENT,920190,Range: Invalid Last Byte Value.
+OWASP_3.2,REQUEST-920-PROTOCOL-ENFORCEMENT,920200,Range: Too many fields (6 or more)
+OWASP_3.2,REQUEST-920-PROTOCOL-ENFORCEMENT,920201,Range: Too many fields for pdf request (35 or more)
+OWASP_3.2,REQUEST-920-PROTOCOL-ENFORCEMENT,920202,Range: Too many fields for pdf request (6 or more)
+OWASP_3.2,REQUEST-920-PROTOCOL-ENFORCEMENT,920210,Multiple/Conflicting Connection Header Data Found.
+OWASP_3.2,REQUEST-920-PROTOCOL-ENFORCEMENT,920220,URL Encoding Abuse Attack Attempt
+OWASP_3.2,REQUEST-920-PROTOCOL-ENFORCEMENT,920230,Multiple URL Encoding Detected
+OWASP_3.2,REQUEST-920-PROTOCOL-ENFORCEMENT,920240,URL Encoding Abuse Attack Attempt
+OWASP_3.2,REQUEST-920-PROTOCOL-ENFORCEMENT,920250,UTF8 Encoding Abuse Attack Attempt
+OWASP_3.2,REQUEST-920-PROTOCOL-ENFORCEMENT,920260,Unicode Full/Half Width Abuse Attack Attempt
+OWASP_3.2,REQUEST-920-PROTOCOL-ENFORCEMENT,920270,Invalid character in request (null character)
+OWASP_3.2,REQUEST-920-PROTOCOL-ENFORCEMENT,920271,Invalid character in request (non printable characters)
+OWASP_3.2,REQUEST-920-PROTOCOL-ENFORCEMENT,920272,Invalid character in request (outside of printable chars below ascii 127)
+OWASP_3.2,REQUEST-920-PROTOCOL-ENFORCEMENT,920273,Invalid character in request (outside of very strict set)
+OWASP_3.2,REQUEST-920-PROTOCOL-ENFORCEMENT,920274,Invalid character in request headers (outside of very strict set)
+OWASP_3.2,REQUEST-920-PROTOCOL-ENFORCEMENT,920280,Request Missing a Host Header
+OWASP_3.2,REQUEST-920-PROTOCOL-ENFORCEMENT,920290,Empty Host Header
+OWASP_3.2,REQUEST-920-PROTOCOL-ENFORCEMENT,920300,Request Missing an Accept Header
+OWASP_3.2,REQUEST-920-PROTOCOL-ENFORCEMENT,920310,Request Has an Empty Accept Header
+OWASP_3.2,REQUEST-920-PROTOCOL-ENFORCEMENT,920311,Request Has an Empty Accept Header
+OWASP_3.2,REQUEST-920-PROTOCOL-ENFORCEMENT,920320,Missing User Agent Header
+OWASP_3.2,REQUEST-920-PROTOCOL-ENFORCEMENT,920330,Empty User Agent Header
+OWASP_3.2,REQUEST-920-PROTOCOL-ENFORCEMENT,920340,"Request Containing Content, but Missing Content-Type header"
+OWASP_3.2,REQUEST-920-PROTOCOL-ENFORCEMENT,920341,Request containing content requires Content-Type header
+OWASP_3.2,REQUEST-920-PROTOCOL-ENFORCEMENT,920350,Host header is a numeric IP address
+OWASP_3.2,REQUEST-920-PROTOCOL-ENFORCEMENT,920420,Request content type is not allowed by policy
+OWASP_3.2,REQUEST-920-PROTOCOL-ENFORCEMENT,920430,HTTP protocol version is not allowed by policy
+OWASP_3.2,REQUEST-920-PROTOCOL-ENFORCEMENT,920440,URL file extension is restricted by policy
+OWASP_3.2,REQUEST-920-PROTOCOL-ENFORCEMENT,920450,HTTP header is restricted by policy (%{MATCHED_VAR})
+OWASP_3.2,REQUEST-920-PROTOCOL-ENFORCEMENT,920460,Abnormal Escape Characters
+OWASP_3.2,REQUEST-920-PROTOCOL-ENFORCEMENT,920470,Illegal Content-Type header
+OWASP_3.2,REQUEST-920-PROTOCOL-ENFORCEMENT,920480,Restrict charset parameter within the content-type header
+OWASP_3.2,REQUEST-921-PROTOCOL-ATTACK,921110,HTTP Request Smuggling Attack
+OWASP_3.2,REQUEST-921-PROTOCOL-ATTACK,921120,HTTP Response Splitting Attack
+OWASP_3.2,REQUEST-921-PROTOCOL-ATTACK,921130,HTTP Response Splitting Attack
+OWASP_3.2,REQUEST-921-PROTOCOL-ATTACK,921140,HTTP Header Injection Attack via headers
+OWASP_3.2,REQUEST-921-PROTOCOL-ATTACK,921150,HTTP Header Injection Attack via payload (CR/LF detected)
+OWASP_3.2,REQUEST-921-PROTOCOL-ATTACK,921151,HTTP Header Injection Attack via payload (CR/LF detected)
+OWASP_3.2,REQUEST-921-PROTOCOL-ATTACK,921160,HTTP Header Injection Attack via payload (CR/LF and header-name detected)
+OWASP_3.2,REQUEST-921-PROTOCOL-ATTACK,921170,HTTP Parameter Pollution
+OWASP_3.2,REQUEST-921-PROTOCOL-ATTACK,921180,HTTP Parameter Pollution (%{TX.1})
+OWASP_3.2,REQUEST-930-APPLICATION-ATTACK-LFI,930100,Path Traversal Attack (/../)
+OWASP_3.2,REQUEST-930-APPLICATION-ATTACK-LFI,930110,Path Traversal Attack (/../)
+OWASP_3.2,REQUEST-930-APPLICATION-ATTACK-LFI,930120,OS File Access Attempt
+OWASP_3.2,REQUEST-930-APPLICATION-ATTACK-LFI,930130,Restricted File Access Attempt
+OWASP_3.2,REQUEST-931-APPLICATION-ATTACK-RFI,931100,Possible Remote File Inclusion (RFI) Attack: URL Parameter using IP Address
+OWASP_3.2,REQUEST-931-APPLICATION-ATTACK-RFI,931110,Possible Remote File Inclusion (RFI) Attack: Common RFI Vulnerable Parameter Name used w/URL Payload
+OWASP_3.2,REQUEST-931-APPLICATION-ATTACK-RFI,931120,Possible Remote File Inclusion (RFI) Attack: URL Payload Used w/Trailing Question Mark Character (?)
+OWASP_3.2,REQUEST-931-APPLICATION-ATTACK-RFI,931130,Possible Remote File Inclusion (RFI) Attack: Off-Domain Reference/Link
+OWASP_3.2,REQUEST-932-APPLICATION-ATTACK-RCE,932100,Remote Command Execution: Unix Command Injection
+OWASP_3.2,REQUEST-932-APPLICATION-ATTACK-RCE,932105,Remote Command Execution: Unix Command Injection
+OWASP_3.2,REQUEST-932-APPLICATION-ATTACK-RCE,932106,Remote Command Execution: Unix Command Injection
+OWASP_3.2,REQUEST-932-APPLICATION-ATTACK-RCE,932110,Remote Command Execution: Windows Command Injection
+OWASP_3.2,REQUEST-932-APPLICATION-ATTACK-RCE,932115,Remote Command Execution: Windows Command Injection
+OWASP_3.2,REQUEST-932-APPLICATION-ATTACK-RCE,932120,Remote Command Execution: Windows PowerShell Command Found
+OWASP_3.2,REQUEST-932-APPLICATION-ATTACK-RCE,932130,Remote Command Execution: Unix Shell Expression Found
+OWASP_3.2,REQUEST-932-APPLICATION-ATTACK-RCE,932140,Remote Command Execution: Windows FOR/IF Command Found
+OWASP_3.2,REQUEST-932-APPLICATION-ATTACK-RCE,932150,Remote Command Execution: Direct Unix Command Execution
+OWASP_3.2,REQUEST-932-APPLICATION-ATTACK-RCE,932160,Remote Command Execution: Unix Shell Code Found
+OWASP_3.2,REQUEST-932-APPLICATION-ATTACK-RCE,932170,Remote Command Execution: Shellshock (CVE-2014-6271)
+OWASP_3.2,REQUEST-932-APPLICATION-ATTACK-RCE,932171,Remote Command Execution: Shellshock (CVE-2014-6271)
+OWASP_3.2,REQUEST-932-APPLICATION-ATTACK-RCE,932180,Restricted File Upload Attempt
+OWASP_3.2,REQUEST-932-APPLICATION-ATTACK-RCE,932190,Remote Command Execution: Wildcard bypass technique attempt
+OWASP_3.2,REQUEST-933-APPLICATION-ATTACK-PHP,933100,PHP Injection Attack: Opening/Closing Tag Found
+OWASP_3.2,REQUEST-933-APPLICATION-ATTACK-PHP,933110,PHP Injection Attack: PHP Script File Upload Found
+OWASP_3.2,REQUEST-933-APPLICATION-ATTACK-PHP,933111,PHP Injection Attack: PHP Script File Upload Found
+OWASP_3.2,REQUEST-933-APPLICATION-ATTACK-PHP,933120,PHP Injection Attack: Configuration Directive Found
+OWASP_3.2,REQUEST-933-APPLICATION-ATTACK-PHP,933130,PHP Injection Attack: Variables Found
+OWASP_3.2,REQUEST-933-APPLICATION-ATTACK-PHP,933131,PHP Injection Attack: Variables Found
+OWASP_3.2,REQUEST-933-APPLICATION-ATTACK-PHP,933140,PHP Injection Attack: I/O Stream Found
+OWASP_3.2,REQUEST-933-APPLICATION-ATTACK-PHP,933150,PHP Injection Attack: High-Risk PHP Function Name Found
+OWASP_3.2,REQUEST-933-APPLICATION-ATTACK-PHP,933151,PHP Injection Attack: Medium-Risk PHP Function Name Found
+OWASP_3.2,REQUEST-933-APPLICATION-ATTACK-PHP,933160,PHP Injection Attack: High-Risk PHP Function Call Found
+OWASP_3.2,REQUEST-933-APPLICATION-ATTACK-PHP,933161,PHP Injection Attack: Low-Value PHP Function Call Found
+OWASP_3.2,REQUEST-933-APPLICATION-ATTACK-PHP,933170,PHP Injection Attack: Serialized Object Injection
+OWASP_3.2,REQUEST-933-APPLICATION-ATTACK-PHP,933180,PHP Injection Attack: Variable Function Call Found
+OWASP_3.2,REQUEST-933-APPLICATION-ATTACK-PHP,933190,PHP Injection Attack: PHP Closing Tag Found
+OWASP_3.2,REQUEST-933-APPLICATION-ATTACK-PHP,933200,PHP Injection Attack: Wrapper scheme detected
+OWASP_3.2,REQUEST-933-APPLICATION-ATTACK-PHP,933210,PHP Injection Attack: Variable Function Call Found
+OWASP_3.2,REQUEST-941-APPLICATION-ATTACK-XSS,941100,XSS Attack Detected via libinjection
+OWASP_3.2,REQUEST-941-APPLICATION-ATTACK-XSS,941101,XSS Attack Detected via libinjection.
+OWASP_3.2,REQUEST-941-APPLICATION-ATTACK-XSS,941110,XSS Filter - Category 1: Script Tag Vector
+OWASP_3.2,REQUEST-941-APPLICATION-ATTACK-XSS,941120,XSS Filter - Category 2: Event Handler Vector
+OWASP_3.2,REQUEST-941-APPLICATION-ATTACK-XSS,941130,XSS Filter - Category 3: Attribute Vector
+OWASP_3.2,REQUEST-941-APPLICATION-ATTACK-XSS,941140,XSS Filter - Category 4: Javascript URI Vector
+OWASP_3.2,REQUEST-941-APPLICATION-ATTACK-XSS,941150,XSS Filter - Category 5: Disallowed HTML Attributes
+OWASP_3.2,REQUEST-941-APPLICATION-ATTACK-XSS,941160,NoScript XSS InjectionChecker: HTML Injection
+OWASP_3.2,REQUEST-941-APPLICATION-ATTACK-XSS,941170,NoScript XSS InjectionChecker: Attribute Injection
+OWASP_3.2,REQUEST-941-APPLICATION-ATTACK-XSS,941180,Node-Validator Blacklist Keywords
+OWASP_3.2,REQUEST-941-APPLICATION-ATTACK-XSS,941190,XSS Using style sheets
+OWASP_3.2,REQUEST-941-APPLICATION-ATTACK-XSS,941200,XSS using VML frames
+OWASP_3.2,REQUEST-941-APPLICATION-ATTACK-XSS,941210,XSS using obfuscated JavaScript
+OWASP_3.2,REQUEST-941-APPLICATION-ATTACK-XSS,941220,XSS using obfuscated VB Script
+OWASP_3.2,REQUEST-941-APPLICATION-ATTACK-XSS,941230,XSS using 'embed' tag
+OWASP_3.2,REQUEST-941-APPLICATION-ATTACK-XSS,941240,XSS using 'import' or 'implementation' attribute
+OWASP_3.2,REQUEST-941-APPLICATION-ATTACK-XSS,941250,IE XSS Filters - Attack Detected.
+OWASP_3.2,REQUEST-941-APPLICATION-ATTACK-XSS,941260,XSS using 'meta' tag
+OWASP_3.2,REQUEST-941-APPLICATION-ATTACK-XSS,941270,XSS using 'link' href
+OWASP_3.2,REQUEST-941-APPLICATION-ATTACK-XSS,941280,XSS using 'base' tag
+OWASP_3.2,REQUEST-941-APPLICATION-ATTACK-XSS,941290,XSS using 'applet' tag
+OWASP_3.2,REQUEST-941-APPLICATION-ATTACK-XSS,941300,XSS using 'object' tag
+OWASP_3.2,REQUEST-941-APPLICATION-ATTACK-XSS,941310,US-ASCII Malformed Encoding XSS Filter - Attack Detected.
+OWASP_3.2,REQUEST-941-APPLICATION-ATTACK-XSS,941320,Possible XSS Attack Detected - HTML Tag Handler
+OWASP_3.2,REQUEST-941-APPLICATION-ATTACK-XSS,941330,IE XSS Filters - Attack Detected.
+OWASP_3.2,REQUEST-941-APPLICATION-ATTACK-XSS,941340,IE XSS Filters - Attack Detected.
+OWASP_3.2,REQUEST-941-APPLICATION-ATTACK-XSS,941350,UTF-7 Encoding IE XSS - Attack Detected.
+OWASP_3.2,REQUEST-941-APPLICATION-ATTACK-XSS,941360,JavaScript obfuscation detected.
+OWASP_3.2,REQUEST-942-APPLICATION-ATTACK-SQLI,942100,SQL Injection Attack Detected via libinjection
+OWASP_3.2,REQUEST-942-APPLICATION-ATTACK-SQLI,942110,SQL Injection Attack: Common Injection Testing Detected
+OWASP_3.2,REQUEST-942-APPLICATION-ATTACK-SQLI,942120,SQL Injection Attack: SQL Operator Detected
+OWASP_3.2,REQUEST-942-APPLICATION-ATTACK-SQLI,942130,SQL Injection Attack: SQL Tautology Detected.
+OWASP_3.2,REQUEST-942-APPLICATION-ATTACK-SQLI,942140,SQL Injection Attack: Common DB Names Detected
+OWASP_3.2,REQUEST-942-APPLICATION-ATTACK-SQLI,942150,SQL Injection Attack
+OWASP_3.2,REQUEST-942-APPLICATION-ATTACK-SQLI,942160,Detects blind sqli tests using sleep() or benchmark().
+OWASP_3.2,REQUEST-942-APPLICATION-ATTACK-SQLI,942170,Detects SQL benchmark and sleep injection attempts including conditional queries
+OWASP_3.2,REQUEST-942-APPLICATION-ATTACK-SQLI,942180,Detects basic SQL authentication bypass attempts 1/3
+OWASP_3.2,REQUEST-942-APPLICATION-ATTACK-SQLI,942190,Detects MSSQL code execution and information gathering attempts
+OWASP_3.2,REQUEST-942-APPLICATION-ATTACK-SQLI,942200,Detects MySQL comment-/space-obfuscated injections and backtick termination
+OWASP_3.2,REQUEST-942-APPLICATION-ATTACK-SQLI,942210,Detects chained SQL injection attempts 1/2
+OWASP_3.2,REQUEST-942-APPLICATION-ATTACK-SQLI,942220,"Looking for intiger overflow attacks, these are taken from skipfish, except 3.0.00738585072007e-308 is the \""magic number\"" crash"
+OWASP_3.2,REQUEST-942-APPLICATION-ATTACK-SQLI,942230,Detects conditional SQL injection attempts
+OWASP_3.2,REQUEST-942-APPLICATION-ATTACK-SQLI,942240,Detects MySQL charset switch and MSSQL DoS attempts
+OWASP_3.2,REQUEST-942-APPLICATION-ATTACK-SQLI,942250,"Detects MATCH AGAINST, MERGE and EXECUTE IMMEDIATE injections"
+OWASP_3.2,REQUEST-942-APPLICATION-ATTACK-SQLI,942251,Detects HAVING injections
+OWASP_3.2,REQUEST-942-APPLICATION-ATTACK-SQLI,942260,Detects basic SQL authentication bypass attempts 2/3
+OWASP_3.2,REQUEST-942-APPLICATION-ATTACK-SQLI,942270,"Looking for basic sql injection. Common attack string for mysql, oracle and others."
+OWASP_3.2,REQUEST-942-APPLICATION-ATTACK-SQLI,942280,"Detects Postgres pg_sleep injection, waitfor delay attacks and database shutdown attempts"
+OWASP_3.2,REQUEST-942-APPLICATION-ATTACK-SQLI,942290,Finds basic MongoDB SQL injection attempts
+OWASP_3.2,REQUEST-942-APPLICATION-ATTACK-SQLI,942300,"Detects MySQL comments, conditions and ch(a)r injections"
+OWASP_3.2,REQUEST-942-APPLICATION-ATTACK-SQLI,942310,Detects chained SQL injection attempts 2/2
+OWASP_3.2,REQUEST-942-APPLICATION-ATTACK-SQLI,942320,Detects MySQL and PostgreSQL stored procedure/function injections
+OWASP_3.2,REQUEST-942-APPLICATION-ATTACK-SQLI,942330,Detects classic SQL injection probings 1/2
+OWASP_3.2,REQUEST-942-APPLICATION-ATTACK-SQLI,942340,Detects basic SQL authentication bypass attempts 3/3
+OWASP_3.2,REQUEST-942-APPLICATION-ATTACK-SQLI,942350,Detects MySQL UDF injection and other data/structure manipulation attempts
+OWASP_3.2,REQUEST-942-APPLICATION-ATTACK-SQLI,942360,Detects concatenated basic SQL injection and SQLLFI attempts
+OWASP_3.2,REQUEST-942-APPLICATION-ATTACK-SQLI,942361,Detects basic SQL injection based on keyword alter or union
+OWASP_3.2,REQUEST-942-APPLICATION-ATTACK-SQLI,942370,Detects classic SQL injection probings 2/2
+OWASP_3.2,REQUEST-942-APPLICATION-ATTACK-SQLI,942380,SQL Injection Attack
+OWASP_3.2,REQUEST-942-APPLICATION-ATTACK-SQLI,942390,SQL Injection Attack
+OWASP_3.2,REQUEST-942-APPLICATION-ATTACK-SQLI,942400,SQL Injection Attack
+OWASP_3.2,REQUEST-942-APPLICATION-ATTACK-SQLI,942410,SQL Injection Attack
+OWASP_3.2,REQUEST-942-APPLICATION-ATTACK-SQLI,942420,Restricted SQL Character Anomaly Detection (cookies): # of special characters exceeded (8)
+OWASP_3.2,REQUEST-942-APPLICATION-ATTACK-SQLI,942421,Restricted SQL Character Anomaly Detection (cookies): # of special characters exceeded (3)
+OWASP_3.2,REQUEST-942-APPLICATION-ATTACK-SQLI,942430,Restricted SQL Character Anomaly Detection (args): # of special characters exceeded (12)
+OWASP_3.2,REQUEST-942-APPLICATION-ATTACK-SQLI,942431,Restricted SQL Character Anomaly Detection (args): # of special characters exceeded (6)
+OWASP_3.2,REQUEST-942-APPLICATION-ATTACK-SQLI,942432,Restricted SQL Character Anomaly Detection (args): # of special characters exceeded (2)
+OWASP_3.2,REQUEST-942-APPLICATION-ATTACK-SQLI,942440,SQL Comment Sequence Detected.
+OWASP_3.2,REQUEST-942-APPLICATION-ATTACK-SQLI,942450,SQL Hex Encoding Identified
+OWASP_3.2,REQUEST-942-APPLICATION-ATTACK-SQLI,942460,Meta-Character Anomaly Detection Alert - Repetitive Non-Word Characters
+OWASP_3.2,REQUEST-942-APPLICATION-ATTACK-SQLI,942470,SQL Injection Attack
+OWASP_3.2,REQUEST-942-APPLICATION-ATTACK-SQLI,942480,SQL Injection Attack
+OWASP_3.2,REQUEST-942-APPLICATION-ATTACK-SQLI,942490,Detects classic SQL injection probings 3/3
+OWASP_3.2,REQUEST-942-APPLICATION-ATTACK-SQLI,942500,MySQL in-line comment detected.
+OWASP_3.2,REQUEST-943-APPLICATION-ATTACK-SESSION-FIXATION,943100,Possible Session Fixation Attack: Setting Cookie Values in HTML
+OWASP_3.2,REQUEST-943-APPLICATION-ATTACK-SESSION-FIXATION,943110,Possible Session Fixation Attack: SessionID Parameter Name with Off-Domain Referer
+OWASP_3.2,REQUEST-943-APPLICATION-ATTACK-SESSION-FIXATION,943120,Possible Session Fixation Attack: SessionID Parameter Name with No Referer
+OWASP_3.2,REQUEST-944-APPLICATION-ATTACK-JAVA,944100,"Remote Command Execution: Apache Struts, Oracle WebLogic"
+OWASP_3.2,REQUEST-944-APPLICATION-ATTACK-JAVA,944110,Detects potential payload execution
+OWASP_3.2,REQUEST-944-APPLICATION-ATTACK-JAVA,944120,Possible payload execution and remote command execution
+OWASP_3.2,REQUEST-944-APPLICATION-ATTACK-JAVA,944130,Suspicious Java classes
+OWASP_3.2,REQUEST-944-APPLICATION-ATTACK-JAVA,944200,Exploitation of Java deserialization Apache Commons
+OWASP_3.2,REQUEST-944-APPLICATION-ATTACK-JAVA,944210,Possible use of Java serialization
+OWASP_3.2,REQUEST-944-APPLICATION-ATTACK-JAVA,944240,Remote Command Execution: Java serialization
+OWASP_3.2,REQUEST-944-APPLICATION-ATTACK-JAVA,944250,Remote Command Execution: Suspicious Java method detected
+OWASP_3.2,Known-CVEs,800100,"Rule to help detect and mitigate log4j vulnerability - CVE-2021-44228, CVE-2021-45046"
+OWASP_3.2,Known-CVEs,800110,Spring4Shell Interaction Attempt
+OWASP_3.2,Known-CVEs,800111,Attempted Spring Cloud routing-expression injection - CVE-2022-22963
+OWASP_3.2,Known-CVEs,800112,Attempted Spring Framework unsafe class object exploitation - CVE-2022-22965
+OWASP_3.2,Known-CVEs,800113,Attempted Spring Cloud Gateway Actuator injection - CVE-2022-22947
+OWASP_3.1,General,200004,Possible Multipart Unmatched Boundary.
+OWASP_3.1,REQUEST-911-METHOD-ENFORCEMENT,911100,Method is not allowed by policy
+OWASP_3.1,REQUEST-913-SCANNER-DETECTION,913100,Found User-Agent associated with security scanner
+OWASP_3.1,REQUEST-913-SCANNER-DETECTION,913101,Found User-Agent associated with scripting/generic HTTP client
+OWASP_3.1,REQUEST-913-SCANNER-DETECTION,913102,Found User-Agent associated with web crawler/bot
+OWASP_3.1,REQUEST-913-SCANNER-DETECTION,913110,Found request header associated with security scanner
+OWASP_3.1,REQUEST-913-SCANNER-DETECTION,913120,Found request filename/argument associated with security scanner
+OWASP_3.1,REQUEST-920-PROTOCOL-ENFORCEMENT,920100,Invalid HTTP Request Line
+OWASP_3.1,REQUEST-920-PROTOCOL-ENFORCEMENT,920120,Attempted multipart/form-data bypass
+OWASP_3.1,REQUEST-920-PROTOCOL-ENFORCEMENT,920121,Attempted multipart/form-data bypass
+OWASP_3.1,REQUEST-920-PROTOCOL-ENFORCEMENT,920130,Failed to parse request body.
+OWASP_3.1,REQUEST-920-PROTOCOL-ENFORCEMENT,920140,"Multipart request body failed strict validation:     PE %{REQBODY_PROCESSOR_ERROR},     BQ %{MULTIPART_BOUNDARY_QUOTED},     BW %{MULTIPART_BOUNDARY_WHITESPACE},     DB %{MULTIPART_DATA_BEFORE},     DA %{MULTIPART_DATA_AFTER},     HF %{MULTIPART_HEADER_FOLDING},     LF %{MULTIPART_LF_LINE},     SM %{MULTIPART_SEMICOLON_MISSING},     IQ %{MULTIPART_INVALID_QUOTING},     IH %{MULTIPART_INVALID_HEADER_FOLDING},     FLE %{MULTIPART_FILE_LIMIT_EXCEEDED}"
+OWASP_3.1,REQUEST-920-PROTOCOL-ENFORCEMENT,920160,Content-Length HTTP header is not numeric.
+OWASP_3.1,REQUEST-920-PROTOCOL-ENFORCEMENT,920170,GET or HEAD Request with Body Content.
+OWASP_3.1,REQUEST-920-PROTOCOL-ENFORCEMENT,920171,GET or HEAD Request with Transfer-Encoding.
+OWASP_3.1,REQUEST-920-PROTOCOL-ENFORCEMENT,920180,POST request missing Content-Length Header.
+OWASP_3.1,REQUEST-920-PROTOCOL-ENFORCEMENT,920190,Range: Invalid Last Byte Value.
+OWASP_3.1,REQUEST-920-PROTOCOL-ENFORCEMENT,920200,Range: Too many fields (6 or more)
+OWASP_3.1,REQUEST-920-PROTOCOL-ENFORCEMENT,920201,Range: Too many fields for pdf request (35 or more)
+OWASP_3.1,REQUEST-920-PROTOCOL-ENFORCEMENT,920202,Range: Too many fields for pdf request (6 or more)
+OWASP_3.1,REQUEST-920-PROTOCOL-ENFORCEMENT,920210,Multiple/Conflicting Connection Header Data Found.
+OWASP_3.1,REQUEST-920-PROTOCOL-ENFORCEMENT,920220,URL Encoding Abuse Attack Attempt
+OWASP_3.1,REQUEST-920-PROTOCOL-ENFORCEMENT,920230,Multiple URL Encoding Detected
+OWASP_3.1,REQUEST-920-PROTOCOL-ENFORCEMENT,920240,URL Encoding Abuse Attack Attempt
+OWASP_3.1,REQUEST-920-PROTOCOL-ENFORCEMENT,920250,UTF8 Encoding Abuse Attack Attempt
+OWASP_3.1,REQUEST-920-PROTOCOL-ENFORCEMENT,920260,Unicode Full/Half Width Abuse Attack Attempt
+OWASP_3.1,REQUEST-920-PROTOCOL-ENFORCEMENT,920270,Invalid character in request (null character)
+OWASP_3.1,REQUEST-920-PROTOCOL-ENFORCEMENT,920271,Invalid character in request (non printable characters)
+OWASP_3.1,REQUEST-920-PROTOCOL-ENFORCEMENT,920272,Invalid character in request (outside of printable chars below ascii 127)
+OWASP_3.1,REQUEST-920-PROTOCOL-ENFORCEMENT,920273,Invalid character in request (outside of very strict set)
+OWASP_3.1,REQUEST-920-PROTOCOL-ENFORCEMENT,920274,Invalid character in request headers (outside of very strict set)
+OWASP_3.1,REQUEST-920-PROTOCOL-ENFORCEMENT,920280,Request Missing a Host Header
+OWASP_3.1,REQUEST-920-PROTOCOL-ENFORCEMENT,920290,Empty Host Header
+OWASP_3.1,REQUEST-920-PROTOCOL-ENFORCEMENT,920300,Request Missing an Accept Header
+OWASP_3.1,REQUEST-920-PROTOCOL-ENFORCEMENT,920310,Request Has an Empty Accept Header
+OWASP_3.1,REQUEST-920-PROTOCOL-ENFORCEMENT,920311,Request Has an Empty Accept Header
+OWASP_3.1,REQUEST-920-PROTOCOL-ENFORCEMENT,920320,Missing User Agent Header
+OWASP_3.1,REQUEST-920-PROTOCOL-ENFORCEMENT,920330,Empty User Agent Header
+OWASP_3.1,REQUEST-920-PROTOCOL-ENFORCEMENT,920340,"Request Containing Content, but Missing Content-Type header"
+OWASP_3.1,REQUEST-920-PROTOCOL-ENFORCEMENT,920341,Request containing content requires Content-Type header
+OWASP_3.1,REQUEST-920-PROTOCOL-ENFORCEMENT,920350,Host header is a numeric IP address
+OWASP_3.1,REQUEST-920-PROTOCOL-ENFORCEMENT,920420,Request content type is not allowed by policy
+OWASP_3.1,REQUEST-920-PROTOCOL-ENFORCEMENT,920430,HTTP protocol version is not allowed by policy
+OWASP_3.1,REQUEST-920-PROTOCOL-ENFORCEMENT,920440,URL file extension is restricted by policy
+OWASP_3.1,REQUEST-920-PROTOCOL-ENFORCEMENT,920450,HTTP header is restricted by policy (%{MATCHED_VAR})
+OWASP_3.1,REQUEST-920-PROTOCOL-ENFORCEMENT,920460,Abnormal Escape Characters
+OWASP_3.1,REQUEST-920-PROTOCOL-ENFORCEMENT,920470,Illegal Content-Type header
+OWASP_3.1,REQUEST-920-PROTOCOL-ENFORCEMENT,920480,Restrict charset parameter within the content-type header
+OWASP_3.1,REQUEST-921-PROTOCOL-ATTACK,921110,HTTP Request Smuggling Attack
+OWASP_3.1,REQUEST-921-PROTOCOL-ATTACK,921120,HTTP Response Splitting Attack
+OWASP_3.1,REQUEST-921-PROTOCOL-ATTACK,921130,HTTP Response Splitting Attack
+OWASP_3.1,REQUEST-921-PROTOCOL-ATTACK,921140,HTTP Header Injection Attack via headers
+OWASP_3.1,REQUEST-921-PROTOCOL-ATTACK,921150,HTTP Header Injection Attack via payload (CR/LF detected)
+OWASP_3.1,REQUEST-921-PROTOCOL-ATTACK,921151,HTTP Header Injection Attack via payload (CR/LF detected)
+OWASP_3.1,REQUEST-921-PROTOCOL-ATTACK,921160,HTTP Header Injection Attack via payload (CR/LF and header-name detected)
+OWASP_3.1,REQUEST-921-PROTOCOL-ATTACK,921170,HTTP Parameter Pollution
+OWASP_3.1,REQUEST-921-PROTOCOL-ATTACK,921180,HTTP Parameter Pollution (%{TX.1})
+OWASP_3.1,REQUEST-930-APPLICATION-ATTACK-LFI,930100,Path Traversal Attack (/../)
+OWASP_3.1,REQUEST-930-APPLICATION-ATTACK-LFI,930110,Path Traversal Attack (/../)
+OWASP_3.1,REQUEST-930-APPLICATION-ATTACK-LFI,930120,OS File Access Attempt
+OWASP_3.1,REQUEST-930-APPLICATION-ATTACK-LFI,930130,Restricted File Access Attempt
+OWASP_3.1,REQUEST-931-APPLICATION-ATTACK-RFI,931100,Possible Remote File Inclusion (RFI) Attack: URL Parameter using IP Address
+OWASP_3.1,REQUEST-931-APPLICATION-ATTACK-RFI,931110,Possible Remote File Inclusion (RFI) Attack: Common RFI Vulnerable Parameter Name used w/URL Payload
+OWASP_3.1,REQUEST-931-APPLICATION-ATTACK-RFI,931120,Possible Remote File Inclusion (RFI) Attack: URL Payload Used w/Trailing Question Mark Character (?)
+OWASP_3.1,REQUEST-931-APPLICATION-ATTACK-RFI,931130,Possible Remote File Inclusion (RFI) Attack: Off-Domain Reference/Link
+OWASP_3.1,REQUEST-932-APPLICATION-ATTACK-RCE,932100,Remote Command Execution: Unix Command Injection
+OWASP_3.1,REQUEST-932-APPLICATION-ATTACK-RCE,932105,Remote Command Execution: Unix Command Injection
+OWASP_3.1,REQUEST-932-APPLICATION-ATTACK-RCE,932106,Remote Command Execution: Unix Command Injection
+OWASP_3.1,REQUEST-932-APPLICATION-ATTACK-RCE,932110,Remote Command Execution: Windows Command Injection
+OWASP_3.1,REQUEST-932-APPLICATION-ATTACK-RCE,932115,Remote Command Execution: Windows Command Injection
+OWASP_3.1,REQUEST-932-APPLICATION-ATTACK-RCE,932120,Remote Command Execution: Windows PowerShell Command Found
+OWASP_3.1,REQUEST-932-APPLICATION-ATTACK-RCE,932130,Remote Command Execution: Unix Shell Expression Found
+OWASP_3.1,REQUEST-932-APPLICATION-ATTACK-RCE,932140,Remote Command Execution: Windows FOR/IF Command Found
+OWASP_3.1,REQUEST-932-APPLICATION-ATTACK-RCE,932150,Remote Command Execution: Direct Unix Command Execution
+OWASP_3.1,REQUEST-932-APPLICATION-ATTACK-RCE,932160,Remote Command Execution: Unix Shell Code Found
+OWASP_3.1,REQUEST-932-APPLICATION-ATTACK-RCE,932170,Remote Command Execution: Shellshock (CVE-2014-6271)
+OWASP_3.1,REQUEST-932-APPLICATION-ATTACK-RCE,932171,Remote Command Execution: Shellshock (CVE-2014-6271)
+OWASP_3.1,REQUEST-932-APPLICATION-ATTACK-RCE,932180,Restricted File Upload Attempt
+OWASP_3.1,REQUEST-932-APPLICATION-ATTACK-RCE,932190,Remote Command Execution: Wildcard bypass technique attempt
+OWASP_3.1,REQUEST-933-APPLICATION-ATTACK-PHP,933100,PHP Injection Attack: Opening/Closing Tag Found
+OWASP_3.1,REQUEST-933-APPLICATION-ATTACK-PHP,933110,PHP Injection Attack: PHP Script File Upload Found
+OWASP_3.1,REQUEST-933-APPLICATION-ATTACK-PHP,933111,PHP Injection Attack: PHP Script File Upload Found
+OWASP_3.1,REQUEST-933-APPLICATION-ATTACK-PHP,933120,PHP Injection Attack: Configuration Directive Found
+OWASP_3.1,REQUEST-933-APPLICATION-ATTACK-PHP,933130,PHP Injection Attack: Variables Found
+OWASP_3.1,REQUEST-933-APPLICATION-ATTACK-PHP,933131,PHP Injection Attack: Variables Found
+OWASP_3.1,REQUEST-933-APPLICATION-ATTACK-PHP,933140,PHP Injection Attack: I/O Stream Found
+OWASP_3.1,REQUEST-933-APPLICATION-ATTACK-PHP,933150,PHP Injection Attack: High-Risk PHP Function Name Found
+OWASP_3.1,REQUEST-933-APPLICATION-ATTACK-PHP,933151,PHP Injection Attack: Medium-Risk PHP Function Name Found
+OWASP_3.1,REQUEST-933-APPLICATION-ATTACK-PHP,933160,PHP Injection Attack: High-Risk PHP Function Call Found
+OWASP_3.1,REQUEST-933-APPLICATION-ATTACK-PHP,933161,PHP Injection Attack: Low-Value PHP Function Call Found
+OWASP_3.1,REQUEST-933-APPLICATION-ATTACK-PHP,933170,PHP Injection Attack: Serialized Object Injection
+OWASP_3.1,REQUEST-933-APPLICATION-ATTACK-PHP,933180,PHP Injection Attack: Variable Function Call Found
+OWASP_3.1,REQUEST-933-APPLICATION-ATTACK-PHP,933190,PHP Injection Attack: PHP Closing Tag Found
+OWASP_3.1,REQUEST-941-APPLICATION-ATTACK-XSS,941100,XSS Attack Detected via libinjection
+OWASP_3.1,REQUEST-941-APPLICATION-ATTACK-XSS,941101,XSS Attack Detected via libinjection.
+OWASP_3.1,REQUEST-941-APPLICATION-ATTACK-XSS,941110,XSS Filter - Category 1: Script Tag Vector
+OWASP_3.1,REQUEST-941-APPLICATION-ATTACK-XSS,941120,XSS Filter - Category 2: Event Handler Vector
+OWASP_3.1,REQUEST-941-APPLICATION-ATTACK-XSS,941130,XSS Filter - Category 3: Attribute Vector
+OWASP_3.1,REQUEST-941-APPLICATION-ATTACK-XSS,941140,XSS Filter - Category 4: Javascript URI Vector
+OWASP_3.1,REQUEST-941-APPLICATION-ATTACK-XSS,941150,XSS Filter - Category 5: Disallowed HTML Attributes
+OWASP_3.1,REQUEST-941-APPLICATION-ATTACK-XSS,941160,NoScript XSS InjectionChecker: HTML Injection
+OWASP_3.1,REQUEST-941-APPLICATION-ATTACK-XSS,941170,NoScript XSS InjectionChecker: Attribute Injection
+OWASP_3.1,REQUEST-941-APPLICATION-ATTACK-XSS,941180,Node-Validator Blacklist Keywords
+OWASP_3.1,REQUEST-941-APPLICATION-ATTACK-XSS,941190,XSS Using style sheets
+OWASP_3.1,REQUEST-941-APPLICATION-ATTACK-XSS,941200,XSS using VML frames
+OWASP_3.1,REQUEST-941-APPLICATION-ATTACK-XSS,941210,XSS using obfuscated JavaScript
+OWASP_3.1,REQUEST-941-APPLICATION-ATTACK-XSS,941220,XSS using obfuscated VB Script
+OWASP_3.1,REQUEST-941-APPLICATION-ATTACK-XSS,941230,XSS using 'embed' tag
+OWASP_3.1,REQUEST-941-APPLICATION-ATTACK-XSS,941240,XSS using 'import' or 'implementation' attribute
+OWASP_3.1,REQUEST-941-APPLICATION-ATTACK-XSS,941250,IE XSS Filters - Attack Detected.
+OWASP_3.1,REQUEST-941-APPLICATION-ATTACK-XSS,941260,XSS using 'meta' tag
+OWASP_3.1,REQUEST-941-APPLICATION-ATTACK-XSS,941270,XSS using 'link' href
+OWASP_3.1,REQUEST-941-APPLICATION-ATTACK-XSS,941280,XSS using 'base' tag
+OWASP_3.1,REQUEST-941-APPLICATION-ATTACK-XSS,941290,XSS using 'applet' tag
+OWASP_3.1,REQUEST-941-APPLICATION-ATTACK-XSS,941300,XSS using 'object' tag
+OWASP_3.1,REQUEST-941-APPLICATION-ATTACK-XSS,941310,US-ASCII Malformed Encoding XSS Filter - Attack Detected.
+OWASP_3.1,REQUEST-941-APPLICATION-ATTACK-XSS,941320,Possible XSS Attack Detected - HTML Tag Handler
+OWASP_3.1,REQUEST-941-APPLICATION-ATTACK-XSS,941330,IE XSS Filters - Attack Detected.
+OWASP_3.1,REQUEST-941-APPLICATION-ATTACK-XSS,941340,IE XSS Filters - Attack Detected.
+OWASP_3.1,REQUEST-941-APPLICATION-ATTACK-XSS,941350,UTF-7 Encoding IE XSS - Attack Detected.
+OWASP_3.1,REQUEST-942-APPLICATION-ATTACK-SQLI,942100,SQL Injection Attack Detected via libinjection
+OWASP_3.1,REQUEST-942-APPLICATION-ATTACK-SQLI,942110,SQL Injection Attack: Common Injection Testing Detected
+OWASP_3.1,REQUEST-942-APPLICATION-ATTACK-SQLI,942120,SQL Injection Attack: SQL Operator Detected
+OWASP_3.1,REQUEST-942-APPLICATION-ATTACK-SQLI,942130,SQL Injection Attack: SQL Tautology Detected.
+OWASP_3.1,REQUEST-942-APPLICATION-ATTACK-SQLI,942140,SQL Injection Attack: Common DB Names Detected
+OWASP_3.1,REQUEST-942-APPLICATION-ATTACK-SQLI,942150,SQL Injection Attack
+OWASP_3.1,REQUEST-942-APPLICATION-ATTACK-SQLI,942160,Detects blind sqli tests using sleep() or benchmark().
+OWASP_3.1,REQUEST-942-APPLICATION-ATTACK-SQLI,942170,Detects SQL benchmark and sleep injection attempts including conditional queries
+OWASP_3.1,REQUEST-942-APPLICATION-ATTACK-SQLI,942180,Detects basic SQL authentication bypass attempts 1/3
+OWASP_3.1,REQUEST-942-APPLICATION-ATTACK-SQLI,942190,Detects MSSQL code execution and information gathering attempts
+OWASP_3.1,REQUEST-942-APPLICATION-ATTACK-SQLI,942200,Detects MySQL comment-/space-obfuscated injections and backtick termination
+OWASP_3.1,REQUEST-942-APPLICATION-ATTACK-SQLI,942210,Detects chained SQL injection attempts 1/2
+OWASP_3.1,REQUEST-942-APPLICATION-ATTACK-SQLI,942220,"Looking for intiger overflow attacks, these are taken from skipfish, except 3.0.00738585072007e-308 is the \""magic number\"" crash"
+OWASP_3.1,REQUEST-942-APPLICATION-ATTACK-SQLI,942230,Detects conditional SQL injection attempts
+OWASP_3.1,REQUEST-942-APPLICATION-ATTACK-SQLI,942240,Detects MySQL charset switch and MSSQL DoS attempts
+OWASP_3.1,REQUEST-942-APPLICATION-ATTACK-SQLI,942250,"Detects MATCH AGAINST, MERGE and EXECUTE IMMEDIATE injections"
+OWASP_3.1,REQUEST-942-APPLICATION-ATTACK-SQLI,942251,Detects HAVING injections
+OWASP_3.1,REQUEST-942-APPLICATION-ATTACK-SQLI,942260,Detects basic SQL authentication bypass attempts 2/3
+OWASP_3.1,REQUEST-942-APPLICATION-ATTACK-SQLI,942270,"Looking for basic sql injection. Common attack string for mysql, oracle and others."
+OWASP_3.1,REQUEST-942-APPLICATION-ATTACK-SQLI,942280,"Detects Postgres pg_sleep injection, waitfor delay attacks and database shutdown attempts"
+OWASP_3.1,REQUEST-942-APPLICATION-ATTACK-SQLI,942290,Finds basic MongoDB SQL injection attempts
+OWASP_3.1,REQUEST-942-APPLICATION-ATTACK-SQLI,942300,"Detects MySQL comments, conditions and ch(a)r injections"
+OWASP_3.1,REQUEST-942-APPLICATION-ATTACK-SQLI,942310,Detects chained SQL injection attempts 2/2
+OWASP_3.1,REQUEST-942-APPLICATION-ATTACK-SQLI,942320,Detects MySQL and PostgreSQL stored procedure/function injections
+OWASP_3.1,REQUEST-942-APPLICATION-ATTACK-SQLI,942330,Detects classic SQL injection probings 1/2
+OWASP_3.1,REQUEST-942-APPLICATION-ATTACK-SQLI,942340,Detects basic SQL authentication bypass attempts 3/3
+OWASP_3.1,REQUEST-942-APPLICATION-ATTACK-SQLI,942350,Detects MySQL UDF injection and other data/structure manipulation attempts
+OWASP_3.1,REQUEST-942-APPLICATION-ATTACK-SQLI,942360,Detects concatenated basic SQL injection and SQLLFI attempts
+OWASP_3.1,REQUEST-942-APPLICATION-ATTACK-SQLI,942361,Detects basic SQL injection based on keyword alter or union
+OWASP_3.1,REQUEST-942-APPLICATION-ATTACK-SQLI,942370,Detects classic SQL injection probings 2/2
+OWASP_3.1,REQUEST-942-APPLICATION-ATTACK-SQLI,942380,SQL Injection Attack
+OWASP_3.1,REQUEST-942-APPLICATION-ATTACK-SQLI,942390,SQL Injection Attack
+OWASP_3.1,REQUEST-942-APPLICATION-ATTACK-SQLI,942400,SQL Injection Attack
+OWASP_3.1,REQUEST-942-APPLICATION-ATTACK-SQLI,942410,SQL Injection Attack
+OWASP_3.1,REQUEST-942-APPLICATION-ATTACK-SQLI,942420,Restricted SQL Character Anomaly Detection (cookies): # of special characters exceeded (8)
+OWASP_3.1,REQUEST-942-APPLICATION-ATTACK-SQLI,942421,Restricted SQL Character Anomaly Detection (cookies): # of special characters exceeded (3)
+OWASP_3.1,REQUEST-942-APPLICATION-ATTACK-SQLI,942430,Restricted SQL Character Anomaly Detection (args): # of special characters exceeded (12)
+OWASP_3.1,REQUEST-942-APPLICATION-ATTACK-SQLI,942431,Restricted SQL Character Anomaly Detection (args): # of special characters exceeded (6)
+OWASP_3.1,REQUEST-942-APPLICATION-ATTACK-SQLI,942432,Restricted SQL Character Anomaly Detection (args): # of special characters exceeded (2)
+OWASP_3.1,REQUEST-942-APPLICATION-ATTACK-SQLI,942440,SQL Comment Sequence Detected.
+OWASP_3.1,REQUEST-942-APPLICATION-ATTACK-SQLI,942450,SQL Hex Encoding Identified
+OWASP_3.1,REQUEST-942-APPLICATION-ATTACK-SQLI,942460,Meta-Character Anomaly Detection Alert - Repetitive Non-Word Characters
+OWASP_3.1,REQUEST-942-APPLICATION-ATTACK-SQLI,942470,SQL Injection Attack
+OWASP_3.1,REQUEST-942-APPLICATION-ATTACK-SQLI,942480,SQL Injection Attack
+OWASP_3.1,REQUEST-942-APPLICATION-ATTACK-SQLI,942490,Detects classic SQL injection probings 3/3
+OWASP_3.1,REQUEST-943-APPLICATION-ATTACK-SESSION-FIXATION,943100,Possible Session Fixation Attack: Setting Cookie Values in HTML
+OWASP_3.1,REQUEST-943-APPLICATION-ATTACK-SESSION-FIXATION,943110,Possible Session Fixation Attack: SessionID Parameter Name with Off-Domain Referer
+OWASP_3.1,REQUEST-943-APPLICATION-ATTACK-SESSION-FIXATION,943120,Possible Session Fixation Attack: SessionID Parameter Name with No Referer
+OWASP_3.1,REQUEST-944-APPLICATION-ATTACK-JAVA,944100,"Remote Command Execution: Apache Struts, Oracle WebLogic"
+OWASP_3.1,REQUEST-944-APPLICATION-ATTACK-JAVA,944110,Detects potential payload execution
+OWASP_3.1,REQUEST-944-APPLICATION-ATTACK-JAVA,944120,Possible payload execution and remote command execution
+OWASP_3.1,REQUEST-944-APPLICATION-ATTACK-JAVA,944130,Suspicious Java classes
+OWASP_3.1,REQUEST-944-APPLICATION-ATTACK-JAVA,944200,Exploitation of Java deserialization Apache Commons
+OWASP_3.1,REQUEST-944-APPLICATION-ATTACK-JAVA,944210,Possible use of Java serialization
+OWASP_3.1,REQUEST-944-APPLICATION-ATTACK-JAVA,944240,Remote Command Execution: Java serialization
+OWASP_3.1,REQUEST-944-APPLICATION-ATTACK-JAVA,944250,Remote Command Execution: Suspicious Java method detected
+OWASP_3.1,Known-CVEs,800100,Rule to help detect and mitigate log4j vulnerability - CVE-2021-44228
+OWASP_3.1,Known-CVEs,800110,Spring4Shell Interaction Attempt
+OWASP_3.1,Known-CVEs,800111,Attempted Spring Cloud routing-expression injection - CVE-2022-22963
+OWASP_3.1,Known-CVEs,800112,Attempted Spring Framework unsafe class object exploitation - CVE-2022-22965
+OWASP_3.1,Known-CVEs,800113,Attempted Spring Cloud Gateway Actuator injection - CVE-2022-22947
+OWASP_3.0,General,200004,Possible Multipart Unmatched Boundary.
+OWASP_3.0,REQUEST-911-METHOD-ENFORCEMENT,911100,Method is not allowed by policy
+OWASP_3.0,REQUEST-913-SCANNER-DETECTION,913100,Found User-Agent associated with security scanner
+OWASP_3.0,REQUEST-913-SCANNER-DETECTION,913101,Found User-Agent associated with scripting/generic HTTP client
+OWASP_3.0,REQUEST-913-SCANNER-DETECTION,913102,Found User-Agent associated with web crawler/bot
+OWASP_3.0,REQUEST-913-SCANNER-DETECTION,913110,Found request header associated with security scanner
+OWASP_3.0,REQUEST-913-SCANNER-DETECTION,913120,Found request filename/argument associated with security scanner
+OWASP_3.0,REQUEST-920-PROTOCOL-ENFORCEMENT,920100,Invalid HTTP Request Line
+OWASP_3.0,REQUEST-920-PROTOCOL-ENFORCEMENT,920120,Attempted multipart/form-data bypass
+OWASP_3.0,REQUEST-920-PROTOCOL-ENFORCEMENT,920130,Failed to parse request body.
+OWASP_3.0,REQUEST-920-PROTOCOL-ENFORCEMENT,920140,"Multipart request body failed strict validation:     PE %{REQBODY_PROCESSOR_ERROR},     BQ %{MULTIPART_BOUNDARY_QUOTED},     BW %{MULTIPART_BOUNDARY_WHITESPACE},     DB %{MULTIPART_DATA_BEFORE},     DA %{MULTIPART_DATA_AFTER},     HF %{MULTIPART_HEADER_FOLDING},     LF %{MULTIPART_LF_LINE},     SM %{MULTIPART_SEMICOLON_MISSING},     IQ %{MULTIPART_INVALID_QUOTING},     IH %{MULTIPART_INVALID_HEADER_FOLDING},     FLE %{MULTIPART_FILE_LIMIT_EXCEEDED}"
+OWASP_3.0,REQUEST-920-PROTOCOL-ENFORCEMENT,920160,Content-Length HTTP header is not numeric.
+OWASP_3.0,REQUEST-920-PROTOCOL-ENFORCEMENT,920170,GET or HEAD Request with Body Content.
+OWASP_3.0,REQUEST-920-PROTOCOL-ENFORCEMENT,920180,POST request missing Content-Length Header.
+OWASP_3.0,REQUEST-920-PROTOCOL-ENFORCEMENT,920190,Range: Invalid Last Byte Value.
+OWASP_3.0,REQUEST-920-PROTOCOL-ENFORCEMENT,920200,Range: Too many fields (6 or more)
+OWASP_3.0,REQUEST-920-PROTOCOL-ENFORCEMENT,920201,Range: Too many fields for pdf request (35 or more)
+OWASP_3.0,REQUEST-920-PROTOCOL-ENFORCEMENT,920202,Range: Too many fields for pdf request (6 or more)
+OWASP_3.0,REQUEST-920-PROTOCOL-ENFORCEMENT,920210,Multiple/Conflicting Connection Header Data Found.
+OWASP_3.0,REQUEST-920-PROTOCOL-ENFORCEMENT,920220,URL Encoding Abuse Attack Attempt
+OWASP_3.0,REQUEST-920-PROTOCOL-ENFORCEMENT,920230,Multiple URL Encoding Detected
+OWASP_3.0,REQUEST-920-PROTOCOL-ENFORCEMENT,920240,URL Encoding Abuse Attack Attempt
+OWASP_3.0,REQUEST-920-PROTOCOL-ENFORCEMENT,920250,UTF8 Encoding Abuse Attack Attempt
+OWASP_3.0,REQUEST-920-PROTOCOL-ENFORCEMENT,920260,Unicode Full/Half Width Abuse Attack Attempt
+OWASP_3.0,REQUEST-920-PROTOCOL-ENFORCEMENT,920270,Invalid character in request (null character)
+OWASP_3.0,REQUEST-920-PROTOCOL-ENFORCEMENT,920271,Invalid character in request (non printable characters)
+OWASP_3.0,REQUEST-920-PROTOCOL-ENFORCEMENT,920272,Invalid character in request (outside of printable chars below ascii 127)
+OWASP_3.0,REQUEST-920-PROTOCOL-ENFORCEMENT,920273,Invalid character in request (outside of very strict set)
+OWASP_3.0,REQUEST-920-PROTOCOL-ENFORCEMENT,920274,Invalid character in request headers (outside of very strict set)
+OWASP_3.0,REQUEST-920-PROTOCOL-ENFORCEMENT,920280,Request Missing a Host Header
+OWASP_3.0,REQUEST-920-PROTOCOL-ENFORCEMENT,920290,Empty Host Header
+OWASP_3.0,REQUEST-920-PROTOCOL-ENFORCEMENT,920300,Request Missing an Accept Header
+OWASP_3.0,REQUEST-920-PROTOCOL-ENFORCEMENT,920310,Request Has an Empty Accept Header
+OWASP_3.0,REQUEST-920-PROTOCOL-ENFORCEMENT,920311,Request Has an Empty Accept Header
+OWASP_3.0,REQUEST-920-PROTOCOL-ENFORCEMENT,920320,Missing User Agent Header
+OWASP_3.0,REQUEST-920-PROTOCOL-ENFORCEMENT,920330,Empty User Agent Header
+OWASP_3.0,REQUEST-920-PROTOCOL-ENFORCEMENT,920340,"Request Containing Content, but Missing Content-Type header"
+OWASP_3.0,REQUEST-920-PROTOCOL-ENFORCEMENT,920350,Host header is a numeric IP address
+OWASP_3.0,REQUEST-920-PROTOCOL-ENFORCEMENT,920420,Request content type is not allowed by policy
+OWASP_3.0,REQUEST-920-PROTOCOL-ENFORCEMENT,920430,HTTP protocol version is not allowed by policy
+OWASP_3.0,REQUEST-920-PROTOCOL-ENFORCEMENT,920440,URL file extension is restricted by policy
+OWASP_3.0,REQUEST-920-PROTOCOL-ENFORCEMENT,920450,HTTP header is restricted by policy (%{MATCHED_VAR})
+OWASP_3.0,REQUEST-920-PROTOCOL-ENFORCEMENT,920460,Abnormal Escape Characters
+OWASP_3.0,REQUEST-921-PROTOCOL-ATTACK,921100,HTTP Request Smuggling Attack.
+OWASP_3.0,REQUEST-921-PROTOCOL-ATTACK,921110,HTTP Request Smuggling Attack
+OWASP_3.0,REQUEST-921-PROTOCOL-ATTACK,921120,HTTP Response Splitting Attack
+OWASP_3.0,REQUEST-921-PROTOCOL-ATTACK,921130,HTTP Response Splitting Attack
+OWASP_3.0,REQUEST-921-PROTOCOL-ATTACK,921140,HTTP Header Injection Attack via headers
+OWASP_3.0,REQUEST-921-PROTOCOL-ATTACK,921150,HTTP Header Injection Attack via payload (CR/LF detected)
+OWASP_3.0,REQUEST-921-PROTOCOL-ATTACK,921151,HTTP Header Injection Attack via payload (CR/LF detected)
+OWASP_3.0,REQUEST-921-PROTOCOL-ATTACK,921160,HTTP Header Injection Attack via payload (CR/LF and header-name detected)
+OWASP_3.0,REQUEST-921-PROTOCOL-ATTACK,921170,HTTP Parameter Pollution
+OWASP_3.0,REQUEST-921-PROTOCOL-ATTACK,921180,HTTP Parameter Pollution (%{TX.1})
+OWASP_3.0,REQUEST-930-APPLICATION-ATTACK-LFI,930100,Path Traversal Attack (/../)
+OWASP_3.0,REQUEST-930-APPLICATION-ATTACK-LFI,930110,Path Traversal Attack (/../)
+OWASP_3.0,REQUEST-930-APPLICATION-ATTACK-LFI,930120,OS File Access Attempt
+OWASP_3.0,REQUEST-930-APPLICATION-ATTACK-LFI,930130,Restricted File Access Attempt
+OWASP_3.0,REQUEST-931-APPLICATION-ATTACK-RFI,931100,Possible Remote File Inclusion (RFI) Attack: URL Parameter using IP Address
+OWASP_3.0,REQUEST-931-APPLICATION-ATTACK-RFI,931110,Possible Remote File Inclusion (RFI) Attack: Common RFI Vulnerable Parameter Name used w/URL Payload
+OWASP_3.0,REQUEST-931-APPLICATION-ATTACK-RFI,931120,Possible Remote File Inclusion (RFI) Attack: URL Payload Used w/Trailing Question Mark Character (?)
+OWASP_3.0,REQUEST-931-APPLICATION-ATTACK-RFI,931130,Possible Remote File Inclusion (RFI) Attack: Off-Domain Reference/Link
+OWASP_3.0,REQUEST-932-APPLICATION-ATTACK-RCE,932100,Remote Command Execution: Unix Command Injection
+OWASP_3.0,REQUEST-932-APPLICATION-ATTACK-RCE,932105,Remote Command Execution: Unix Command Injection
+OWASP_3.0,REQUEST-932-APPLICATION-ATTACK-RCE,932110,Remote Command Execution: Windows Command Injection
+OWASP_3.0,REQUEST-932-APPLICATION-ATTACK-RCE,932115,Remote Command Execution: Windows Command Injection
+OWASP_3.0,REQUEST-932-APPLICATION-ATTACK-RCE,932120,Remote Command Execution: Windows PowerShell Command Found
+OWASP_3.0,REQUEST-932-APPLICATION-ATTACK-RCE,932130,Remote Command Execution: Unix Shell Expression Found
+OWASP_3.0,REQUEST-932-APPLICATION-ATTACK-RCE,932140,Remote Command Execution: Windows FOR/IF Command Found
+OWASP_3.0,REQUEST-932-APPLICATION-ATTACK-RCE,932150,Remote Command Execution: Direct Unix Command Execution
+OWASP_3.0,REQUEST-932-APPLICATION-ATTACK-RCE,932160,Remote Command Execution: Unix Shell Code Found
+OWASP_3.0,REQUEST-932-APPLICATION-ATTACK-RCE,932170,Remote Command Execution: Shellshock (CVE-2014-6271)
+OWASP_3.0,REQUEST-932-APPLICATION-ATTACK-RCE,932171,Remote Command Execution: Shellshock (CVE-2014-6271)
+OWASP_3.0,REQUEST-933-APPLICATION-ATTACK-PHP,933100,PHP Injection Attack: Opening/Closing Tag Found
+OWASP_3.0,REQUEST-933-APPLICATION-ATTACK-PHP,933110,PHP Injection Attack: PHP Script File Upload Found
+OWASP_3.0,REQUEST-933-APPLICATION-ATTACK-PHP,933111,PHP Injection Attack: PHP Script File Upload Found
+OWASP_3.0,REQUEST-933-APPLICATION-ATTACK-PHP,933120,PHP Injection Attack: Configuration Directive Found
+OWASP_3.0,REQUEST-933-APPLICATION-ATTACK-PHP,933130,PHP Injection Attack: Variables Found
+OWASP_3.0,REQUEST-933-APPLICATION-ATTACK-PHP,933131,PHP Injection Attack: Variables Found
+OWASP_3.0,REQUEST-933-APPLICATION-ATTACK-PHP,933140,PHP Injection Attack: I/O Stream Found
+OWASP_3.0,REQUEST-933-APPLICATION-ATTACK-PHP,933150,PHP Injection Attack: High-Risk PHP Function Name Found
+OWASP_3.0,REQUEST-933-APPLICATION-ATTACK-PHP,933151,PHP Injection Attack: Medium-Risk PHP Function Name Found
+OWASP_3.0,REQUEST-933-APPLICATION-ATTACK-PHP,933160,PHP Injection Attack: High-Risk PHP Function Call Found
+OWASP_3.0,REQUEST-933-APPLICATION-ATTACK-PHP,933161,PHP Injection Attack: Low-Value PHP Function Call Found
+OWASP_3.0,REQUEST-933-APPLICATION-ATTACK-PHP,933170,PHP Injection Attack: Serialized Object Injection
+OWASP_3.0,REQUEST-933-APPLICATION-ATTACK-PHP,933180,PHP Injection Attack: Variable Function Call Found
+OWASP_3.0,REQUEST-941-APPLICATION-ATTACK-XSS,941100,XSS Attack Detected via libinjection
+OWASP_3.0,REQUEST-941-APPLICATION-ATTACK-XSS,941110,XSS Filter - Category 1: Script Tag Vector
+OWASP_3.0,REQUEST-941-APPLICATION-ATTACK-XSS,941120,XSS Filter - Category 2: Event Handler Vector
+OWASP_3.0,REQUEST-941-APPLICATION-ATTACK-XSS,941130,XSS Filter - Category 3: Attribute Vector
+OWASP_3.0,REQUEST-941-APPLICATION-ATTACK-XSS,941140,XSS Filter - Category 4: Javascript URI Vector
+OWASP_3.0,REQUEST-941-APPLICATION-ATTACK-XSS,941150,XSS Filter - Category 5: Disallowed HTML Attributes
+OWASP_3.0,REQUEST-941-APPLICATION-ATTACK-XSS,941160,NoScript XSS InjectionChecker: HTML Injection
+OWASP_3.0,REQUEST-941-APPLICATION-ATTACK-XSS,941170,NoScript XSS InjectionChecker: Attribute Injection
+OWASP_3.0,REQUEST-941-APPLICATION-ATTACK-XSS,941180,Node-Validator Blacklist Keywords
+OWASP_3.0,REQUEST-941-APPLICATION-ATTACK-XSS,941190,XSS Using style sheets
+OWASP_3.0,REQUEST-941-APPLICATION-ATTACK-XSS,941200,XSS using VML frames
+OWASP_3.0,REQUEST-941-APPLICATION-ATTACK-XSS,941210,XSS using obfuscated JavaScript
+OWASP_3.0,REQUEST-941-APPLICATION-ATTACK-XSS,941220,XSS using obfuscated VB Script
+OWASP_3.0,REQUEST-941-APPLICATION-ATTACK-XSS,941230,XSS using 'embed' tag
+OWASP_3.0,REQUEST-941-APPLICATION-ATTACK-XSS,941240,XSS using 'import' or 'implementation' attribute
+OWASP_3.0,REQUEST-941-APPLICATION-ATTACK-XSS,941250,IE XSS Filters - Attack Detected.
+OWASP_3.0,REQUEST-941-APPLICATION-ATTACK-XSS,941260,XSS using 'meta' tag
+OWASP_3.0,REQUEST-941-APPLICATION-ATTACK-XSS,941270,XSS using 'link' href
+OWASP_3.0,REQUEST-941-APPLICATION-ATTACK-XSS,941280,XSS using 'base' tag
+OWASP_3.0,REQUEST-941-APPLICATION-ATTACK-XSS,941290,XSS using 'applet' tag
+OWASP_3.0,REQUEST-941-APPLICATION-ATTACK-XSS,941300,XSS using 'object' tag
+OWASP_3.0,REQUEST-941-APPLICATION-ATTACK-XSS,941310,US-ASCII Malformed Encoding XSS Filter - Attack Detected.
+OWASP_3.0,REQUEST-941-APPLICATION-ATTACK-XSS,941320,Possible XSS Attack Detected - HTML Tag Handler
+OWASP_3.0,REQUEST-941-APPLICATION-ATTACK-XSS,941330,IE XSS Filters - Attack Detected.
+OWASP_3.0,REQUEST-941-APPLICATION-ATTACK-XSS,941340,IE XSS Filters - Attack Detected.
+OWASP_3.0,REQUEST-941-APPLICATION-ATTACK-XSS,941350,UTF-7 Encoding IE XSS - Attack Detected.
+OWASP_3.0,REQUEST-942-APPLICATION-ATTACK-SQLI,942100,SQL Injection Attack Detected via libinjection
+OWASP_3.0,REQUEST-942-APPLICATION-ATTACK-SQLI,942110,SQL Injection Attack: Common Injection Testing Detected
+OWASP_3.0,REQUEST-942-APPLICATION-ATTACK-SQLI,942120,SQL Injection Attack: SQL Operator Detected
+OWASP_3.0,REQUEST-942-APPLICATION-ATTACK-SQLI,942130,SQL Injection Attack: SQL Tautology Detected.
+OWASP_3.0,REQUEST-942-APPLICATION-ATTACK-SQLI,942140,SQL Injection Attack: Common DB Names Detected
+OWASP_3.0,REQUEST-942-APPLICATION-ATTACK-SQLI,942150,SQL Injection Attack
+OWASP_3.0,REQUEST-942-APPLICATION-ATTACK-SQLI,942160,Detects blind sqli tests using sleep() or benchmark().
+OWASP_3.0,REQUEST-942-APPLICATION-ATTACK-SQLI,942170,Detects SQL benchmark and sleep injection attempts including conditional queries
+OWASP_3.0,REQUEST-942-APPLICATION-ATTACK-SQLI,942180,Detects basic SQL authentication bypass attempts 1/3
+OWASP_3.0,REQUEST-942-APPLICATION-ATTACK-SQLI,942190,Detects MSSQL code execution and information gathering attempts
+OWASP_3.0,REQUEST-942-APPLICATION-ATTACK-SQLI,942200,Detects MySQL comment-/space-obfuscated injections and backtick termination
+OWASP_3.0,REQUEST-942-APPLICATION-ATTACK-SQLI,942210,Detects chained SQL injection attempts 1/2
+OWASP_3.0,REQUEST-942-APPLICATION-ATTACK-SQLI,942220,"Looking for intiger overflow attacks, these are taken from skipfish, except 3.0.00738585072007e-308 is the \""magic number\"" crash"
+OWASP_3.0,REQUEST-942-APPLICATION-ATTACK-SQLI,942230,Detects conditional SQL injection attempts
+OWASP_3.0,REQUEST-942-APPLICATION-ATTACK-SQLI,942240,Detects MySQL charset switch and MSSQL DoS attempts
+OWASP_3.0,REQUEST-942-APPLICATION-ATTACK-SQLI,942250,"Detects MATCH AGAINST, MERGE and EXECUTE IMMEDIATE injections"
+OWASP_3.0,REQUEST-942-APPLICATION-ATTACK-SQLI,942251,Detects HAVING injections
+OWASP_3.0,REQUEST-942-APPLICATION-ATTACK-SQLI,942260,Detects basic SQL authentication bypass attempts 2/3
+OWASP_3.0,REQUEST-942-APPLICATION-ATTACK-SQLI,942270,"Looking for basic sql injection. Common attack string for mysql, oracle and others."
+OWASP_3.0,REQUEST-942-APPLICATION-ATTACK-SQLI,942280,"Detects Postgres pg_sleep injection, waitfor delay attacks and database shutdown attempts"
+OWASP_3.0,REQUEST-942-APPLICATION-ATTACK-SQLI,942290,Finds basic MongoDB SQL injection attempts
+OWASP_3.0,REQUEST-942-APPLICATION-ATTACK-SQLI,942300,"Detects MySQL comments, conditions and ch(a)r injections"
+OWASP_3.0,REQUEST-942-APPLICATION-ATTACK-SQLI,942310,Detects chained SQL injection attempts 2/2
+OWASP_3.0,REQUEST-942-APPLICATION-ATTACK-SQLI,942320,Detects MySQL and PostgreSQL stored procedure/function injections
+OWASP_3.0,REQUEST-942-APPLICATION-ATTACK-SQLI,942330,Detects classic SQL injection probings 1/2
+OWASP_3.0,REQUEST-942-APPLICATION-ATTACK-SQLI,942340,Detects basic SQL authentication bypass attempts 3/3
+OWASP_3.0,REQUEST-942-APPLICATION-ATTACK-SQLI,942350,Detects MySQL UDF injection and other data/structure manipulation attempts
+OWASP_3.0,REQUEST-942-APPLICATION-ATTACK-SQLI,942360,Detects concatenated basic SQL injection and SQLLFI attempts
+OWASP_3.0,REQUEST-942-APPLICATION-ATTACK-SQLI,942370,Detects classic SQL injection probings 2/2
+OWASP_3.0,REQUEST-942-APPLICATION-ATTACK-SQLI,942380,SQL Injection Attack
+OWASP_3.0,REQUEST-942-APPLICATION-ATTACK-SQLI,942390,SQL Injection Attack
+OWASP_3.0,REQUEST-942-APPLICATION-ATTACK-SQLI,942400,SQL Injection Attack
+OWASP_3.0,REQUEST-942-APPLICATION-ATTACK-SQLI,942410,SQL Injection Attack
+OWASP_3.0,REQUEST-942-APPLICATION-ATTACK-SQLI,942420,Restricted SQL Character Anomaly Detection (cookies): # of special characters exceeded (8)
+OWASP_3.0,REQUEST-942-APPLICATION-ATTACK-SQLI,942421,Restricted SQL Character Anomaly Detection (cookies): # of special characters exceeded (3)
+OWASP_3.0,REQUEST-942-APPLICATION-ATTACK-SQLI,942430,Restricted SQL Character Anomaly Detection (args): # of special characters exceeded (12)
+OWASP_3.0,REQUEST-942-APPLICATION-ATTACK-SQLI,942431,Restricted SQL Character Anomaly Detection (args): # of special characters exceeded (6)
+OWASP_3.0,REQUEST-942-APPLICATION-ATTACK-SQLI,942432,Restricted SQL Character Anomaly Detection (args): # of special characters exceeded (2)
+OWASP_3.0,REQUEST-942-APPLICATION-ATTACK-SQLI,942440,SQL Comment Sequence Detected.
+OWASP_3.0,REQUEST-942-APPLICATION-ATTACK-SQLI,942450,SQL Hex Encoding Identified
+OWASP_3.0,REQUEST-942-APPLICATION-ATTACK-SQLI,942460,Meta-Character Anomaly Detection Alert - Repetitive Non-Word Characters
+OWASP_3.0,REQUEST-943-APPLICATION-ATTACK-SESSION-FIXATION,943100,Possible Session Fixation Attack: Setting Cookie Values in HTML
+OWASP_3.0,REQUEST-943-APPLICATION-ATTACK-SESSION-FIXATION,943110,Possible Session Fixation Attack: SessionID Parameter Name with Off-Domain Referer
+OWASP_3.0,REQUEST-943-APPLICATION-ATTACK-SESSION-FIXATION,943120,Possible Session Fixation Attack: SessionID Parameter Name with No Referer
+OWASP_3.0,Known-CVEs,800100,Rule to help detect and mitigate log4j vulnerability - CVE-2021-44228
+OWASP_3.0,Known-CVEs,800110,Spring4Shell Interaction Attempt
+OWASP_3.0,Known-CVEs,800111,Attempted Spring Cloud routing-expression injection - CVE-2022-22963
+OWASP_3.0,Known-CVEs,800112,Attempted Spring Framework unsafe class object exploitation - CVE-2022-22965
+OWASP_3.0,Known-CVEs,800113,Attempted Spring Cloud Gateway Actuator injection - CVE-2022-22947
+OWASP_2.2.9,General,200004,Possible Multipart Unmatched Boundary.
+OWASP_2.2.9,crs_20_protocol_violations,950107,URL Encoding Abuse Attack Attempt
+OWASP_2.2.9,crs_20_protocol_violations,950108,URL Encoding Abuse Attack Attempt
+OWASP_2.2.9,crs_20_protocol_violations,950109,Multiple URL Encoding Detected
+OWASP_2.2.9,crs_20_protocol_violations,950116,Unicode Full/Half Width Abuse Attack Attempt
+OWASP_2.2.9,crs_20_protocol_violations,950801,UTF8 Encoding Abuse Attack Attempt
+OWASP_2.2.9,crs_20_protocol_violations,958230,Range: Invalid Last Byte Value.
+OWASP_2.2.9,crs_20_protocol_violations,958231,Range: Too many fields
+OWASP_2.2.9,crs_20_protocol_violations,958291,Range: field exists and begins with 0.
+OWASP_2.2.9,crs_20_protocol_violations,958295,Multiple/Conflicting Connection Header Data Found.
+OWASP_2.2.9,crs_20_protocol_violations,960000,Attempted multipart/form-data bypass
+OWASP_2.2.9,crs_20_protocol_violations,960011,GET or HEAD Request with Body Content.
+OWASP_2.2.9,crs_20_protocol_violations,960012,POST request missing Content-Length Header.
+OWASP_2.2.9,crs_20_protocol_violations,960016,Content-Length HTTP header is not numeric.
+OWASP_2.2.9,crs_20_protocol_violations,960018,Invalid character in request
+OWASP_2.2.9,crs_20_protocol_violations,960020,Pragma Header requires Cache-Control Header for HTTP/1.1 requests.
+OWASP_2.2.9,crs_20_protocol_violations,960022,Expect Header Not Allowed for HTTP 1.0.
+OWASP_2.2.9,crs_20_protocol_violations,960901,Invalid character in request
+OWASP_2.2.9,crs_20_protocol_violations,960902,Invalid Use of Identity Encoding.
+OWASP_2.2.9,crs_20_protocol_violations,960911,Invalid HTTP Request Line
+OWASP_2.2.9,crs_20_protocol_violations,960912,Failed to parse request body.
+OWASP_2.2.9,crs_20_protocol_violations,960914,"Multipart request body failed strict validation:     PE %{REQBODY_PROCESSOR_ERROR},     BQ %{MULTIPART_BOUNDARY_QUOTED},     BW %{MULTIPART_BOUNDARY_WHITESPACE},     DB %{MULTIPART_DATA_BEFORE},     DA %{MULTIPART_DATA_AFTER},     HF %{MULTIPART_HEADER_FOLDING},     LF %{MULTIPART_LF_LINE},     SM %{MULTIPART_SEMICOLON_MISSING},     IQ %{MULTIPART_INVALID_QUOTING},     IH %{MULTIPART_INVALID_HEADER_FOLDING},     FLE %{MULTIPART_FILE_LIMIT_EXCEEDED}"
+OWASP_2.2.9,crs_20_protocol_violations,960915,Multipart parser detected a possible unmatched boundary.
+OWASP_2.2.9,crs_20_protocol_violations,981227,Apache Error: Invalid URI in Request.
+OWASP_2.2.9,crs_21_protocol_anomalies,960006,Empty User Agent Header
+OWASP_2.2.9,crs_21_protocol_anomalies,960007,Empty Host Header
+OWASP_2.2.9,crs_21_protocol_anomalies,960008,Request Missing a Host Header
+OWASP_2.2.9,crs_21_protocol_anomalies,960009,Request Missing a User Agent Header
+OWASP_2.2.9,crs_21_protocol_anomalies,960015,Request Missing an Accept Header
+OWASP_2.2.9,crs_21_protocol_anomalies,960017,Host header is a numeric IP address
+OWASP_2.2.9,crs_21_protocol_anomalies,960021,Request Has an Empty Accept Header
+OWASP_2.2.9,crs_21_protocol_anomalies,960904,"Request Containing Content, but Missing Content-Type header"
+OWASP_2.2.9,crs_23_request_limits,960208,Argument value too long
+OWASP_2.2.9,crs_23_request_limits,960209,Argument name too long
+OWASP_2.2.9,crs_23_request_limits,960335,Too many arguments in request
+OWASP_2.2.9,crs_23_request_limits,960341,Total arguments size exceeded
+OWASP_2.2.9,crs_23_request_limits,960342,Uploaded file size too large
+OWASP_2.2.9,crs_23_request_limits,960343,Total uploaded files size too large
+OWASP_2.2.9,crs_30_http_policy,960010,Request content type is not allowed by policy
+OWASP_2.2.9,crs_30_http_policy,960032,Method is not allowed by policy
+OWASP_2.2.9,crs_30_http_policy,960034,HTTP protocol version is not allowed by policy
+OWASP_2.2.9,crs_30_http_policy,960035,URL file extension is restricted by policy
+OWASP_2.2.9,crs_30_http_policy,960038,HTTP header is restricted by policy
+OWASP_2.2.9,crs_35_bad_robots,990002,Request Indicates a Security Scanner Scanned the Site
+OWASP_2.2.9,crs_35_bad_robots,990012,Rogue web site crawler
+OWASP_2.2.9,crs_35_bad_robots,990901,Request Indicates a Security Scanner Scanned the Site
+OWASP_2.2.9,crs_35_bad_robots,990902,Request Indicates a Security Scanner Scanned the Site
+OWASP_2.2.9,crs_40_generic_attacks,950000,Session Fixation
+OWASP_2.2.9,crs_40_generic_attacks,950002,System Command Access
+OWASP_2.2.9,crs_40_generic_attacks,950003,Session Fixation
+OWASP_2.2.9,crs_40_generic_attacks,950005,Remote File Access Attempt
+OWASP_2.2.9,crs_40_generic_attacks,950006,System Command Injection
+OWASP_2.2.9,crs_40_generic_attacks,950008,Injection of Undocumented ColdFusion Tags
+OWASP_2.2.9,crs_40_generic_attacks,950009,Session Fixation Attack
+OWASP_2.2.9,crs_40_generic_attacks,950010,LDAP Injection Attack
+OWASP_2.2.9,crs_40_generic_attacks,950011,SSI injection Attack
+OWASP_2.2.9,crs_40_generic_attacks,950012,HTTP Request Smuggling Attack.
+OWASP_2.2.9,crs_40_generic_attacks,950018,Universal PDF XSS URL Detected.
+OWASP_2.2.9,crs_40_generic_attacks,950019,Email Injection Attack
+OWASP_2.2.9,crs_40_generic_attacks,950117,Remote File Inclusion Attack
+OWASP_2.2.9,crs_40_generic_attacks,950118,Remote File Inclusion Attack
+OWASP_2.2.9,crs_40_generic_attacks,950119,Remote File Inclusion Attack
+OWASP_2.2.9,crs_40_generic_attacks,950120,Possible Remote File Inclusion (RFI) Attack: Off-Domain Reference/Link
+OWASP_2.2.9,crs_40_generic_attacks,950907,System Command Injection
+OWASP_2.2.9,crs_40_generic_attacks,950910,HTTP Response Splitting Attack
+OWASP_2.2.9,crs_40_generic_attacks,950911,HTTP Response Splitting Attack
+OWASP_2.2.9,crs_40_generic_attacks,958976,PHP Injection Attack
+OWASP_2.2.9,crs_40_generic_attacks,958977,PHP Injection Attack
+OWASP_2.2.9,crs_40_generic_attacks,959151,PHP Injection Attack
+OWASP_2.2.9,crs_40_generic_attacks,960024,Meta-Character Anomaly Detection Alert - Repetative Non-Word Characters
+OWASP_2.2.9,crs_40_generic_attacks,981133,Rule 981133
+OWASP_2.2.9,crs_40_generic_attacks,981134,Rule 981134
+OWASP_2.2.9,crs_41_sql_injection_attacks,950001,SQL Injection Attack
+OWASP_2.2.9,crs_41_sql_injection_attacks,950007,Blind SQL Injection Attack
+OWASP_2.2.9,crs_41_sql_injection_attacks,950901,SQL Injection Attack: SQL Tautology Detected.
+OWASP_2.2.9,crs_41_sql_injection_attacks,950908,SQL Injection Attack.
+OWASP_2.2.9,crs_41_sql_injection_attacks,959070,SQL Injection Attack
+OWASP_2.2.9,crs_41_sql_injection_attacks,959071,SQL Injection Attack
+OWASP_2.2.9,crs_41_sql_injection_attacks,959072,SQL Injection Attack
+OWASP_2.2.9,crs_41_sql_injection_attacks,959073,SQL Injection Attack
+OWASP_2.2.9,crs_41_sql_injection_attacks,981172,Restricted SQL Character Anomaly Detection Alert - Total # of special characters exceeded
+OWASP_2.2.9,crs_41_sql_injection_attacks,981173,Restricted SQL Character Anomaly Detection Alert - Total # of special characters exceeded
+OWASP_2.2.9,crs_41_sql_injection_attacks,981231,SQL Comment Sequence Detected.
+OWASP_2.2.9,crs_41_sql_injection_attacks,981240,"Detects MySQL comments, conditions and ch(a)r injections"
+OWASP_2.2.9,crs_41_sql_injection_attacks,981241,Detects conditional SQL injection attempts
+OWASP_2.2.9,crs_41_sql_injection_attacks,981242,Detects classic SQL injection probings 1/2
+OWASP_2.2.9,crs_41_sql_injection_attacks,981243,Detects classic SQL injection probings 2/2
+OWASP_2.2.9,crs_41_sql_injection_attacks,981244,Detects basic SQL authentication bypass attempts 1/3
+OWASP_2.2.9,crs_41_sql_injection_attacks,981245,Detects basic SQL authentication bypass attempts 2/3
+OWASP_2.2.9,crs_41_sql_injection_attacks,981246,Detects basic SQL authentication bypass attempts 3/3
+OWASP_2.2.9,crs_41_sql_injection_attacks,981247,Detects concatenated basic SQL injection and SQLLFI attempts
+OWASP_2.2.9,crs_41_sql_injection_attacks,981248,Detects chained SQL injection attempts 1/2
+OWASP_2.2.9,crs_41_sql_injection_attacks,981249,Detects chained SQL injection attempts 2/2
+OWASP_2.2.9,crs_41_sql_injection_attacks,981250,Detects SQL benchmark and sleep injection attempts including conditional queries
+OWASP_2.2.9,crs_41_sql_injection_attacks,981251,Detects MySQL UDF injection and other data/structure manipulation attempts
+OWASP_2.2.9,crs_41_sql_injection_attacks,981252,Detects MySQL charset switch and MSSQL DoS attempts
+OWASP_2.2.9,crs_41_sql_injection_attacks,981253,Detects MySQL and PostgreSQL stored procedure/function injections
+OWASP_2.2.9,crs_41_sql_injection_attacks,981254,"Detects Postgres pg_sleep injection, waitfor delay attacks and database shutdown attempts"
+OWASP_2.2.9,crs_41_sql_injection_attacks,981255,Detects MSSQL code execution and information gathering attempts
+OWASP_2.2.9,crs_41_sql_injection_attacks,981256,"Detects MATCH AGAINST, MERGE, EXECUTE IMMEDIATE and HAVING injections"
+OWASP_2.2.9,crs_41_sql_injection_attacks,981257,Detects MySQL comment-/space-obfuscated injections and backtick termination
+OWASP_2.2.9,crs_41_sql_injection_attacks,981260,SQL Hex Encoding Identified
+OWASP_2.2.9,crs_41_sql_injection_attacks,981270,Finds basic MongoDB SQL injection attempts
+OWASP_2.2.9,crs_41_sql_injection_attacks,981272,Detects blind sqli tests using sleep() or benchmark().
+OWASP_2.2.9,crs_41_sql_injection_attacks,981276,"Looking for basic sql injection. Common attack string for mysql, oracle and others."
+OWASP_2.2.9,crs_41_sql_injection_attacks,981277,"Looking for integer overflow attacks, these are taken from skipfish, except 2.2.90738585072007e-308 is the \""magic number\"" crash"
+OWASP_2.2.9,crs_41_sql_injection_attacks,981300,Rule 981300
+OWASP_2.2.9,crs_41_sql_injection_attacks,981301,Rule 981301
+OWASP_2.2.9,crs_41_sql_injection_attacks,981302,Rule 981302
+OWASP_2.2.9,crs_41_sql_injection_attacks,981303,Rule 981303
+OWASP_2.2.9,crs_41_sql_injection_attacks,981304,Rule 981304
+OWASP_2.2.9,crs_41_sql_injection_attacks,981305,Rule 981305
+OWASP_2.2.9,crs_41_sql_injection_attacks,981306,Rule 981306
+OWASP_2.2.9,crs_41_sql_injection_attacks,981307,Rule 981307
+OWASP_2.2.9,crs_41_sql_injection_attacks,981308,Rule 981308
+OWASP_2.2.9,crs_41_sql_injection_attacks,981309,Rule 981309
+OWASP_2.2.9,crs_41_sql_injection_attacks,981310,Rule 981310
+OWASP_2.2.9,crs_41_sql_injection_attacks,981311,Rule 981311
+OWASP_2.2.9,crs_41_sql_injection_attacks,981312,Rule 981312
+OWASP_2.2.9,crs_41_sql_injection_attacks,981313,Rule 981313
+OWASP_2.2.9,crs_41_sql_injection_attacks,981314,Rule 981314
+OWASP_2.2.9,crs_41_sql_injection_attacks,981315,Rule 981315
+OWASP_2.2.9,crs_41_sql_injection_attacks,981316,Rule 981316
+OWASP_2.2.9,crs_41_sql_injection_attacks,981317,SQL SELECT Statement Anomaly Detection Alert
+OWASP_2.2.9,crs_41_sql_injection_attacks,981318,SQL Injection Attack: Common Injection Testing Detected
+OWASP_2.2.9,crs_41_sql_injection_attacks,981319,SQL Injection Attack: SQL Operator Detected
+OWASP_2.2.9,crs_41_sql_injection_attacks,981320,SQL Injection Attack: Common DB Names Detected
+OWASP_2.2.9,crs_41_xss_attacks,958000,Cross-site Scripting (XSS) Attack
+OWASP_2.2.9,crs_41_xss_attacks,958001,Cross-site Scripting (XSS) Attack
+OWASP_2.2.9,crs_41_xss_attacks,958002,Cross-site Scripting (XSS) Attack
+OWASP_2.2.9,crs_41_xss_attacks,958003,Cross-site Scripting (XSS) Attack
+OWASP_2.2.9,crs_41_xss_attacks,958004,Cross-site Scripting (XSS) Attack
+OWASP_2.2.9,crs_41_xss_attacks,958005,Cross-site Scripting (XSS) Attack
+OWASP_2.2.9,crs_41_xss_attacks,958006,Cross-site Scripting (XSS) Attack
+OWASP_2.2.9,crs_41_xss_attacks,958007,Cross-site Scripting (XSS) Attack
+OWASP_2.2.9,crs_41_xss_attacks,958008,Cross-site Scripting (XSS) Attack
+OWASP_2.2.9,crs_41_xss_attacks,958009,Cross-site Scripting (XSS) Attack
+OWASP_2.2.9,crs_41_xss_attacks,958010,Cross-site Scripting (XSS) Attack
+OWASP_2.2.9,crs_41_xss_attacks,958011,Cross-site Scripting (XSS) Attack
+OWASP_2.2.9,crs_41_xss_attacks,958012,Cross-site Scripting (XSS) Attack
+OWASP_2.2.9,crs_41_xss_attacks,958013,Cross-site Scripting (XSS) Attack
+OWASP_2.2.9,crs_41_xss_attacks,958016,Cross-site Scripting (XSS) Attack
+OWASP_2.2.9,crs_41_xss_attacks,958017,Cross-site Scripting (XSS) Attack
+OWASP_2.2.9,crs_41_xss_attacks,958018,Cross-site Scripting (XSS) Attack
+OWASP_2.2.9,crs_41_xss_attacks,958019,Cross-site Scripting (XSS) Attack
+OWASP_2.2.9,crs_41_xss_attacks,958020,Cross-site Scripting (XSS) Attack
+OWASP_2.2.9,crs_41_xss_attacks,958022,Cross-site Scripting (XSS) Attack
+OWASP_2.2.9,crs_41_xss_attacks,958023,Cross-site Scripting (XSS) Attack
+OWASP_2.2.9,crs_41_xss_attacks,958024,Cross-site Scripting (XSS) Attack
+OWASP_2.2.9,crs_41_xss_attacks,958025,Cross-site Scripting (XSS) Attack
+OWASP_2.2.9,crs_41_xss_attacks,958026,Cross-site Scripting (XSS) Attack
+OWASP_2.2.9,crs_41_xss_attacks,958027,Cross-site Scripting (XSS) Attack
+OWASP_2.2.9,crs_41_xss_attacks,958028,Cross-site Scripting (XSS) Attack
+OWASP_2.2.9,crs_41_xss_attacks,958030,Cross-site Scripting (XSS) Attack
+OWASP_2.2.9,crs_41_xss_attacks,958031,Cross-site Scripting (XSS) Attack
+OWASP_2.2.9,crs_41_xss_attacks,958032,Cross-site Scripting (XSS) Attack
+OWASP_2.2.9,crs_41_xss_attacks,958033,Cross-site Scripting (XSS) Attack
+OWASP_2.2.9,crs_41_xss_attacks,958034,Cross-site Scripting (XSS) Attack
+OWASP_2.2.9,crs_41_xss_attacks,958036,Cross-site Scripting (XSS) Attack
+OWASP_2.2.9,crs_41_xss_attacks,958037,Cross-site Scripting (XSS) Attack
+OWASP_2.2.9,crs_41_xss_attacks,958038,Cross-site Scripting (XSS) Attack
+OWASP_2.2.9,crs_41_xss_attacks,958039,Cross-site Scripting (XSS) Attack
+OWASP_2.2.9,crs_41_xss_attacks,958040,Cross-site Scripting (XSS) Attack
+OWASP_2.2.9,crs_41_xss_attacks,958041,Cross-site Scripting (XSS) Attack
+OWASP_2.2.9,crs_41_xss_attacks,958045,Cross-site Scripting (XSS) Attack
+OWASP_2.2.9,crs_41_xss_attacks,958046,Cross-site Scripting (XSS) Attack
+OWASP_2.2.9,crs_41_xss_attacks,958047,Cross-site Scripting (XSS) Attack
+OWASP_2.2.9,crs_41_xss_attacks,958049,Cross-site Scripting (XSS) Attack
+OWASP_2.2.9,crs_41_xss_attacks,958051,Cross-site Scripting (XSS) Attack
+OWASP_2.2.9,crs_41_xss_attacks,958052,Cross-site Scripting (XSS) Attack
+OWASP_2.2.9,crs_41_xss_attacks,958054,Cross-site Scripting (XSS) Attack
+OWASP_2.2.9,crs_41_xss_attacks,958056,Cross-site Scripting (XSS) Attack
+OWASP_2.2.9,crs_41_xss_attacks,958057,Cross-site Scripting (XSS) Attack
+OWASP_2.2.9,crs_41_xss_attacks,958059,Cross-site Scripting (XSS) Attack
+OWASP_2.2.9,crs_41_xss_attacks,958404,Cross-site Scripting (XSS) Attack
+OWASP_2.2.9,crs_41_xss_attacks,958405,Cross-site Scripting (XSS) Attack
+OWASP_2.2.9,crs_41_xss_attacks,958406,Cross-site Scripting (XSS) Attack
+OWASP_2.2.9,crs_41_xss_attacks,958407,Cross-site Scripting (XSS) Attack
+OWASP_2.2.9,crs_41_xss_attacks,958408,Cross-site Scripting (XSS) Attack
+OWASP_2.2.9,crs_41_xss_attacks,958409,Cross-site Scripting (XSS) Attack
+OWASP_2.2.9,crs_41_xss_attacks,958410,Cross-site Scripting (XSS) Attack
+OWASP_2.2.9,crs_41_xss_attacks,958411,Cross-site Scripting (XSS) Attack
+OWASP_2.2.9,crs_41_xss_attacks,958412,Cross-site Scripting (XSS) Attack
+OWASP_2.2.9,crs_41_xss_attacks,958413,Cross-site Scripting (XSS) Attack
+OWASP_2.2.9,crs_41_xss_attacks,958414,Cross-site Scripting (XSS) Attack
+OWASP_2.2.9,crs_41_xss_attacks,958415,Cross-site Scripting (XSS) Attack
+OWASP_2.2.9,crs_41_xss_attacks,958416,Cross-site Scripting (XSS) Attack
+OWASP_2.2.9,crs_41_xss_attacks,958417,Cross-site Scripting (XSS) Attack
+OWASP_2.2.9,crs_41_xss_attacks,958418,Cross-site Scripting (XSS) Attack
+OWASP_2.2.9,crs_41_xss_attacks,958419,Cross-site Scripting (XSS) Attack
+OWASP_2.2.9,crs_41_xss_attacks,958420,Cross-site Scripting (XSS) Attack
+OWASP_2.2.9,crs_41_xss_attacks,958421,Cross-site Scripting (XSS) Attack
+OWASP_2.2.9,crs_41_xss_attacks,958422,Cross-site Scripting (XSS) Attack
+OWASP_2.2.9,crs_41_xss_attacks,958423,Cross-site Scripting (XSS) Attack
+OWASP_2.2.9,crs_41_xss_attacks,973300,Possible XSS Attack Detected - HTML Tag Handler
+OWASP_2.2.9,crs_41_xss_attacks,973301,XSS Attack Detected
+OWASP_2.2.9,crs_41_xss_attacks,973302,XSS Attack Detected
+OWASP_2.2.9,crs_41_xss_attacks,973303,XSS Attack Detected
+OWASP_2.2.9,crs_41_xss_attacks,973304,XSS Attack Detected
+OWASP_2.2.9,crs_41_xss_attacks,973305,XSS Attack Detected
+OWASP_2.2.9,crs_41_xss_attacks,973306,XSS Attack Detected
+OWASP_2.2.9,crs_41_xss_attacks,973307,XSS Attack Detected
+OWASP_2.2.9,crs_41_xss_attacks,973308,XSS Attack Detected
+OWASP_2.2.9,crs_41_xss_attacks,973309,XSS Attack Detected
+OWASP_2.2.9,crs_41_xss_attacks,973310,XSS Attack Detected
+OWASP_2.2.9,crs_41_xss_attacks,973311,XSS Attack Detected
+OWASP_2.2.9,crs_41_xss_attacks,973312,XSS Attack Detected
+OWASP_2.2.9,crs_41_xss_attacks,973313,XSS Attack Detected
+OWASP_2.2.9,crs_41_xss_attacks,973314,XSS Attack Detected
+OWASP_2.2.9,crs_41_xss_attacks,973315,IE XSS Filters - Attack Detected.
+OWASP_2.2.9,crs_41_xss_attacks,973316,IE XSS Filters - Attack Detected.
+OWASP_2.2.9,crs_41_xss_attacks,973317,IE XSS Filters - Attack Detected.
+OWASP_2.2.9,crs_41_xss_attacks,973318,IE XSS Filters - Attack Detected.
+OWASP_2.2.9,crs_41_xss_attacks,973319,IE XSS Filters - Attack Detected.
+OWASP_2.2.9,crs_41_xss_attacks,973320,IE XSS Filters - Attack Detected.
+OWASP_2.2.9,crs_41_xss_attacks,973321,IE XSS Filters - Attack Detected.
+OWASP_2.2.9,crs_41_xss_attacks,973322,IE XSS Filters - Attack Detected.
+OWASP_2.2.9,crs_41_xss_attacks,973323,IE XSS Filters - Attack Detected.
+OWASP_2.2.9,crs_41_xss_attacks,973324,IE XSS Filters - Attack Detected.
+OWASP_2.2.9,crs_41_xss_attacks,973325,IE XSS Filters - Attack Detected.
+OWASP_2.2.9,crs_41_xss_attacks,973326,IE XSS Filters - Attack Detected.
+OWASP_2.2.9,crs_41_xss_attacks,973327,IE XSS Filters - Attack Detected.
+OWASP_2.2.9,crs_41_xss_attacks,973328,IE XSS Filters - Attack Detected.
+OWASP_2.2.9,crs_41_xss_attacks,973329,IE XSS Filters - Attack Detected.
+OWASP_2.2.9,crs_41_xss_attacks,973330,IE XSS Filters - Attack Detected.
+OWASP_2.2.9,crs_41_xss_attacks,973331,IE XSS Filters - Attack Detected.
+OWASP_2.2.9,crs_41_xss_attacks,973332,IE XSS Filters - Attack Detected.
+OWASP_2.2.9,crs_41_xss_attacks,973333,IE XSS Filters - Attack Detected.
+OWASP_2.2.9,crs_41_xss_attacks,973334,IE XSS Filters - Attack Detected.
+OWASP_2.2.9,crs_41_xss_attacks,973335,IE XSS Filters - Attack Detected.
+OWASP_2.2.9,crs_41_xss_attacks,973336,XSS Filter - Category 1: Script Tag Vector
+OWASP_2.2.9,crs_41_xss_attacks,973337,XSS Filter - Category 2: Event Handler Vector
+OWASP_2.2.9,crs_41_xss_attacks,973338,XSS Filter - Category 3: Javascript URI Vector
+OWASP_2.2.9,crs_41_xss_attacks,973344,IE XSS Filters - Attack Detected.
+OWASP_2.2.9,crs_41_xss_attacks,973345,IE XSS Filters - Attack Detected.
+OWASP_2.2.9,crs_41_xss_attacks,973346,IE XSS Filters - Attack Detected.
+OWASP_2.2.9,crs_41_xss_attacks,973347,IE XSS Filters - Attack Detected.
+OWASP_2.2.9,crs_41_xss_attacks,973348,IE XSS Filters - Attack Detected.
+OWASP_2.2.9,crs_41_xss_attacks,981018,Rule 981018
+OWASP_2.2.9,crs_41_xss_attacks,981136,Rule 981136
+OWASP_2.2.9,crs_42_tight_security,950103,Path Traversal Attack
+OWASP_2.2.9,crs_45_trojans,950110,Backdoor access
+OWASP_2.2.9,crs_45_trojans,950921,Backdoor access
+OWASP_2.2.9,crs_49_inbound_blocking,981175,Inbound Attack Targeting OSVDB Flagged Resource.
+OWASP_2.2.9,crs_49_inbound_blocking,981176,"Inbound Anomaly Score Exceeded (Total Score: %{TX.ANOMALY_SCORE}, SQLi=%{TX.SQL_INJECTION_SCORE}, XSS=%{TX.XSS_SCORE}): Last Matched Message: %{tx.msg}"
+Microsoft_BotManagerRuleSet_0.1,KnownBadBots,1,Malicious Bots
+Microsoft_BotManagerRuleSet_1.0,BadBots,100100,Malicious bots detected by threat intelligence
+Microsoft_BotManagerRuleSet_1.0,BadBots,100200,Malicious bots that have falsified their identity
+Microsoft_BotManagerRuleSet_1.0,GoodBots,200100,Search engine crawlers
+Microsoft_BotManagerRuleSet_1.0,GoodBots,200200,Unverified search engine crawlers
+Microsoft_BotManagerRuleSet_1.0,UnknownBots,300100,Unspecified identity
+Microsoft_BotManagerRuleSet_1.0,UnknownBots,300200,Tools and frameworks for web crawling and attacks
+Microsoft_BotManagerRuleSet_1.0,UnknownBots,300300,General purpose HTTP clients and SDKs
+Microsoft_BotManagerRuleSet_1.0,UnknownBots,300400,Service agents
+Microsoft_BotManagerRuleSet_1.0,UnknownBots,300500,Site health monitoring services
+Microsoft_BotManagerRuleSet_1.0,UnknownBots,300600,Unknown bots detected by threat intelligence
+Microsoft_BotManagerRuleSet_1.0,UnknownBots,300700,Other bots
+Microsoft_DefaultRuleSet_2.1,LFI,930100,Path Traversal Attack (/../)
+Microsoft_DefaultRuleSet_2.1,LFI,930110,Path Traversal Attack (/../)
+Microsoft_DefaultRuleSet_2.1,LFI,930120,OS File Access Attempt
+Microsoft_DefaultRuleSet_2.1,LFI,930130,Restricted File Access Attempt
+Microsoft_DefaultRuleSet_2.1,RFI,931100,Possible Remote File Inclusion (RFI) Attack: URL Parameter using IP Address
+Microsoft_DefaultRuleSet_2.1,RFI,931110,Possible Remote File Inclusion (RFI) Attack: Common RFI Vulnerable Parameter Name used w/URL Payload
+Microsoft_DefaultRuleSet_2.1,RFI,931120,Possible Remote File Inclusion (RFI) Attack: URL Payload Used w/Trailing Question Mark Character (?)
+Microsoft_DefaultRuleSet_2.1,RFI,931130,Possible Remote File Inclusion (RFI) Attack: Off-Domain Reference/Link
+Microsoft_DefaultRuleSet_2.1,RCE,932100,Remote Command Execution: Unix Command Injection
+Microsoft_DefaultRuleSet_2.1,RCE,932105,Remote Command Execution: Unix Command Injection
+Microsoft_DefaultRuleSet_2.1,RCE,932110,Remote Command Execution: Windows Command Injection
+Microsoft_DefaultRuleSet_2.1,RCE,932115,Remote Command Execution: Windows Command Injection
+Microsoft_DefaultRuleSet_2.1,RCE,932120,Remote Command Execution: Windows PowerShell Command Found
+Microsoft_DefaultRuleSet_2.1,RCE,932130,Remote Command Execution: Unix Shell Expression or Confluence Vulnerability (CVE-2022-26134) Found
+Microsoft_DefaultRuleSet_2.1,RCE,932140,Remote Command Execution: Windows FOR/IF Command Found
+Microsoft_DefaultRuleSet_2.1,RCE,932150,Remote Command Execution: Direct Unix Command Execution
+Microsoft_DefaultRuleSet_2.1,RCE,932160,Remote Command Execution: Unix Shell Code Found
+Microsoft_DefaultRuleSet_2.1,RCE,932170,Remote Command Execution: Shellshock (CVE-2014-6271)
+Microsoft_DefaultRuleSet_2.1,RCE,932171,Remote Command Execution: Shellshock (CVE-2014-6271)
+Microsoft_DefaultRuleSet_2.1,RCE,932180,Restricted File Upload Attempt
+Microsoft_DefaultRuleSet_2.1,PHP,933100,PHP Injection Attack: PHP Open Tag Found
+Microsoft_DefaultRuleSet_2.1,PHP,933110,PHP Injection Attack: PHP Script File Upload Found
+Microsoft_DefaultRuleSet_2.1,PHP,933120,PHP Injection Attack: Configuration Directive Found
+Microsoft_DefaultRuleSet_2.1,PHP,933130,PHP Injection Attack: Variables Found
+Microsoft_DefaultRuleSet_2.1,PHP,933140,PHP Injection Attack: I/O Stream Found
+Microsoft_DefaultRuleSet_2.1,PHP,933150,PHP Injection Attack: High-Risk PHP Function Name Found
+Microsoft_DefaultRuleSet_2.1,PHP,933151,PHP Injection Attack: Medium-Risk PHP Function Name Found
+Microsoft_DefaultRuleSet_2.1,PHP,933160,PHP Injection Attack: High-Risk PHP Function Call Found
+Microsoft_DefaultRuleSet_2.1,PHP,933170,PHP Injection Attack: Serialized Object Injection
+Microsoft_DefaultRuleSet_2.1,PHP,933180,PHP Injection Attack: Variable Function Call Found
+Microsoft_DefaultRuleSet_2.1,PHP,933200,PHP Injection Attack: Wrapper scheme detected
+Microsoft_DefaultRuleSet_2.1,PHP,933210,PHP Injection Attack: Variable Function Call Found
+Microsoft_DefaultRuleSet_2.1,XSS,941100,XSS Attack Detected via libinjection
+Microsoft_DefaultRuleSet_2.1,XSS,941101,XSS Attack Detected via libinjection
+Microsoft_DefaultRuleSet_2.1,XSS,941110,XSS Filter - Category 1: Script Tag Vector
+Microsoft_DefaultRuleSet_2.1,XSS,941120,XSS Filter - Category 2: Event Handler Vector
+Microsoft_DefaultRuleSet_2.1,XSS,941130,XSS Filter - Category 3: Attribute Vector
+Microsoft_DefaultRuleSet_2.1,XSS,941140,XSS Filter - Category 4: Javascript URI Vector
+Microsoft_DefaultRuleSet_2.1,XSS,941150,XSS Filter - Category 5: Disallowed HTML Attributes
+Microsoft_DefaultRuleSet_2.1,XSS,941160,NoScript XSS InjectionChecker: HTML Injection
+Microsoft_DefaultRuleSet_2.1,XSS,941170,NoScript XSS InjectionChecker: Attribute Injection
+Microsoft_DefaultRuleSet_2.1,XSS,941180,Node-Validator Blacklist Keywords
+Microsoft_DefaultRuleSet_2.1,XSS,941190,IE XSS Filters - Attack Detected
+Microsoft_DefaultRuleSet_2.1,XSS,941200,IE XSS Filters - Attack Detected
+Microsoft_DefaultRuleSet_2.1,XSS,941210,IE XSS Filters - Attack Detected
+Microsoft_DefaultRuleSet_2.1,XSS,941220,IE XSS Filters - Attack Detected
+Microsoft_DefaultRuleSet_2.1,XSS,941230,IE XSS Filters - Attack Detected
+Microsoft_DefaultRuleSet_2.1,XSS,941240,IE XSS Filters - Attack Detected
+Microsoft_DefaultRuleSet_2.1,XSS,941250,IE XSS Filters - Attack Detected
+Microsoft_DefaultRuleSet_2.1,XSS,941260,IE XSS Filters - Attack Detected
+Microsoft_DefaultRuleSet_2.1,XSS,941270,IE XSS Filters - Attack Detected
+Microsoft_DefaultRuleSet_2.1,XSS,941280,IE XSS Filters - Attack Detected
+Microsoft_DefaultRuleSet_2.1,XSS,941290,IE XSS Filters - Attack Detected
+Microsoft_DefaultRuleSet_2.1,XSS,941300,IE XSS Filters - Attack Detected
+Microsoft_DefaultRuleSet_2.1,XSS,941310,US-ASCII Malformed Encoding XSS Filter - Attack Detected
+Microsoft_DefaultRuleSet_2.1,XSS,941320,Possible XSS Attack Detected - HTML Tag Handler
+Microsoft_DefaultRuleSet_2.1,XSS,941330,IE XSS Filters - Attack Detected
+Microsoft_DefaultRuleSet_2.1,XSS,941340,IE XSS Filters - Attack Detected
+Microsoft_DefaultRuleSet_2.1,XSS,941350,UTF-7 Encoding IE XSS - Attack Detected
+Microsoft_DefaultRuleSet_2.1,XSS,941360,JSFuck / Hieroglyphy obfuscation detected
+Microsoft_DefaultRuleSet_2.1,XSS,941370,JavaScript global variable found
+Microsoft_DefaultRuleSet_2.1,XSS,941380,AngularJS client side template injection detected
+Microsoft_DefaultRuleSet_2.1,SQLI,942100,SQL Injection Attack Detected via libinjection
+Microsoft_DefaultRuleSet_2.1,SQLI,942110,SQL Injection Attack: Common Injection Testing Detected
+Microsoft_DefaultRuleSet_2.1,SQLI,942120,SQL Injection Attack: SQL Operator Detected
+Microsoft_DefaultRuleSet_2.1,SQLI,942130,SQL Injection Attack: SQL Tautology Detected.
+Microsoft_DefaultRuleSet_2.1,SQLI,942140,SQL Injection Attack: Common DB Names Detected
+Microsoft_DefaultRuleSet_2.1,SQLI,942150,SQL Injection Attack
+Microsoft_DefaultRuleSet_2.1,SQLI,942160,Detects blind sqli tests using sleep() or benchmark()
+Microsoft_DefaultRuleSet_2.1,SQLI,942170,Detects SQL benchmark and sleep injection attempts including conditional queries
+Microsoft_DefaultRuleSet_2.1,SQLI,942180,Detects basic SQL authentication bypass attempts 1/3
+Microsoft_DefaultRuleSet_2.1,SQLI,942190,Detects MSSQL code execution and information gathering attempts
+Microsoft_DefaultRuleSet_2.1,SQLI,942200,Detects MySQL comment-/space-obfuscated injections and backtick termination
+Microsoft_DefaultRuleSet_2.1,SQLI,942210,Detects chained SQL injection attempts 1/2
+Microsoft_DefaultRuleSet_2.1,SQLI,942220,"Looking for integer overflow attacks, these are taken from skipfish, except 3.0.00738585072007e-308 is the \""magic number\"" crash"
+Microsoft_DefaultRuleSet_2.1,SQLI,942230,Detects conditional SQL injection attempts
+Microsoft_DefaultRuleSet_2.1,SQLI,942240,Detects MySQL charset switch and MSSQL DoS attempts
+Microsoft_DefaultRuleSet_2.1,SQLI,942250,"Detects MATCH AGAINST, MERGE and EXECUTE IMMEDIATE injections"
+Microsoft_DefaultRuleSet_2.1,SQLI,942260,Detects basic SQL authentication bypass attempts 2/3
+Microsoft_DefaultRuleSet_2.1,SQLI,942270,"Looking for basic sql injection. Common attack string for mysql, oracle and others"
+Microsoft_DefaultRuleSet_2.1,SQLI,942280,"Detects Postgres pg_sleep injection, waitfor delay attacks and database shutdown attempts"
+Microsoft_DefaultRuleSet_2.1,SQLI,942290,Finds basic MongoDB SQL injection attempts
+Microsoft_DefaultRuleSet_2.1,SQLI,942300,"Detects MySQL comments, conditions and ch(a)r injections"
+Microsoft_DefaultRuleSet_2.1,SQLI,942310,Detects chained SQL injection attempts 2/2
+Microsoft_DefaultRuleSet_2.1,SQLI,942320,Detects MySQL and PostgreSQL stored procedure/function injections
+Microsoft_DefaultRuleSet_2.1,SQLI,942330,Detects classic SQL injection probings 1/3
+Microsoft_DefaultRuleSet_2.1,SQLI,942340,Detects basic SQL authentication bypass attempts 3/3
+Microsoft_DefaultRuleSet_2.1,SQLI,942350,Detects MySQL UDF injection and other data/structure manipulation attempts
+Microsoft_DefaultRuleSet_2.1,SQLI,942360,Detects concatenated basic SQL injection and SQLLFI attempts
+Microsoft_DefaultRuleSet_2.1,SQLI,942361,Detects basic SQL injection based on keyword alter or union
+Microsoft_DefaultRuleSet_2.1,SQLI,942370,Detects classic SQL injection probings 2/3
+Microsoft_DefaultRuleSet_2.1,SQLI,942380,SQL Injection Attack
+Microsoft_DefaultRuleSet_2.1,SQLI,942390,SQL Injection Attack
+Microsoft_DefaultRuleSet_2.1,SQLI,942400,SQL Injection Attack
+Microsoft_DefaultRuleSet_2.1,SQLI,942410,SQL Injection Attack
+Microsoft_DefaultRuleSet_2.1,SQLI,942430,Restricted SQL Character Anomaly Detection (args): # of special characters exceeded (12)
+Microsoft_DefaultRuleSet_2.1,SQLI,942440,SQL Comment Sequence Detected
+Microsoft_DefaultRuleSet_2.1,SQLI,942450,SQL Hex Encoding Identified
+Microsoft_DefaultRuleSet_2.1,SQLI,942470,SQL Injection Attack
+Microsoft_DefaultRuleSet_2.1,SQLI,942480,SQL Injection Attack
+Microsoft_DefaultRuleSet_2.1,SQLI,942500,MySQL in-line comment detected
+Microsoft_DefaultRuleSet_2.1,SQLI,942510,SQLi bypass attempt by ticks or backticks detected
+Microsoft_DefaultRuleSet_2.1,FIX,943100,Possible Session Fixation Attack: Setting Cookie Values in HTML
+Microsoft_DefaultRuleSet_2.1,FIX,943110,Possible Session Fixation Attack: SessionID Parameter Name with Off-Domain Referer
+Microsoft_DefaultRuleSet_2.1,FIX,943120,Possible Session Fixation Attack: SessionID Parameter Name with No Referer
+Microsoft_DefaultRuleSet_2.1,JAVA,944100,Remote Command Execution: Suspicious Java class detected
+Microsoft_DefaultRuleSet_2.1,JAVA,944110,Remote Command Execution: Java process spawn (CVE-2017-9805)
+Microsoft_DefaultRuleSet_2.1,JAVA,944120,Remote Command Execution: Java serialization (CVE-2015-4852)
+Microsoft_DefaultRuleSet_2.1,JAVA,944130,Suspicious Java class detected
+Microsoft_DefaultRuleSet_2.1,JAVA,944200,"Magic bytes Detected, probable java serialization in use"
+Microsoft_DefaultRuleSet_2.1,JAVA,944210,"Magic bytes Detected Base64 Encoded, probable java serialization in use"
+Microsoft_DefaultRuleSet_2.1,JAVA,944240,"Remote Command Execution: Java serialization and Log4j vulnerability (CVE-2021-44228, CVE-2021-45046)"
+Microsoft_DefaultRuleSet_2.1,JAVA,944250,Remote Command Execution: Suspicious Java method detected
+Microsoft_DefaultRuleSet_2.1,PROTOCOL-ATTACK,921110,HTTP Request Smuggling Attack
+Microsoft_DefaultRuleSet_2.1,PROTOCOL-ATTACK,921120,HTTP Response Splitting Attack
+Microsoft_DefaultRuleSet_2.1,PROTOCOL-ATTACK,921130,HTTP Response Splitting Attack
+Microsoft_DefaultRuleSet_2.1,PROTOCOL-ATTACK,921140,HTTP Header Injection Attack via headers
+Microsoft_DefaultRuleSet_2.1,PROTOCOL-ATTACK,921150,HTTP Header Injection Attack via payload (CR/LF detected)
+Microsoft_DefaultRuleSet_2.1,PROTOCOL-ATTACK,921151,HTTP Header Injection Attack via payload (CR/LF detected)
+Microsoft_DefaultRuleSet_2.1,PROTOCOL-ATTACK,921160,HTTP Header Injection Attack via payload (CR/LF and header-name detected)
+Microsoft_DefaultRuleSet_2.1,PROTOCOL-ATTACK,921190,HTTP Splitting (CR/LF in request filename detected)
+Microsoft_DefaultRuleSet_2.1,PROTOCOL-ATTACK,921200,LDAP Injection Attack
+Microsoft_DefaultRuleSet_2.1,METHOD-ENFORCEMENT,911100,Method is not allowed by policy
+Microsoft_DefaultRuleSet_2.1,PROTOCOL-ENFORCEMENT,920100,Invalid HTTP Request Line
+Microsoft_DefaultRuleSet_2.1,PROTOCOL-ENFORCEMENT,920120,Attempted multipart/form-data bypass
+Microsoft_DefaultRuleSet_2.1,PROTOCOL-ENFORCEMENT,920121,Attempted multipart/form-data bypass
+Microsoft_DefaultRuleSet_2.1,PROTOCOL-ENFORCEMENT,920160,Content-Length HTTP header is not numeric
+Microsoft_DefaultRuleSet_2.1,PROTOCOL-ENFORCEMENT,920170,GET or HEAD Request with Body Content
+Microsoft_DefaultRuleSet_2.1,PROTOCOL-ENFORCEMENT,920171,GET or HEAD Request with Transfer-Encoding
+Microsoft_DefaultRuleSet_2.1,PROTOCOL-ENFORCEMENT,920180,POST without Content-Length or Transfer-Encoding headers
+Microsoft_DefaultRuleSet_2.1,PROTOCOL-ENFORCEMENT,920181,Content-Length and Transfer-Encoding headers present.
+Microsoft_DefaultRuleSet_2.1,PROTOCOL-ENFORCEMENT,920190,Range: Invalid Last Byte Value
+Microsoft_DefaultRuleSet_2.1,PROTOCOL-ENFORCEMENT,920200,Range: Too many fields (6 or more)
+Microsoft_DefaultRuleSet_2.1,PROTOCOL-ENFORCEMENT,920201,Range: Too many fields for pdf request (63 or more)
+Microsoft_DefaultRuleSet_2.1,PROTOCOL-ENFORCEMENT,920210,Multiple/Conflicting Connection Header Data Found
+Microsoft_DefaultRuleSet_2.1,PROTOCOL-ENFORCEMENT,920220,URL Encoding Abuse Attack Attempt
+Microsoft_DefaultRuleSet_2.1,PROTOCOL-ENFORCEMENT,920230,Multiple URL Encoding Detected
+Microsoft_DefaultRuleSet_2.1,PROTOCOL-ENFORCEMENT,920240,URL Encoding Abuse Attack Attempt
+Microsoft_DefaultRuleSet_2.1,PROTOCOL-ENFORCEMENT,920260,Unicode Full/Half Width Abuse Attack Attempt
+Microsoft_DefaultRuleSet_2.1,PROTOCOL-ENFORCEMENT,920270,Invalid character in request (null character)
+Microsoft_DefaultRuleSet_2.1,PROTOCOL-ENFORCEMENT,920271,Invalid character in request (non printable characters)
+Microsoft_DefaultRuleSet_2.1,PROTOCOL-ENFORCEMENT,920280,Request Missing a Host Header
+Microsoft_DefaultRuleSet_2.1,PROTOCOL-ENFORCEMENT,920290,Empty Host Header
+Microsoft_DefaultRuleSet_2.1,PROTOCOL-ENFORCEMENT,920300,Request Missing an Accept Header
+Microsoft_DefaultRuleSet_2.1,PROTOCOL-ENFORCEMENT,920310,Request Has an Empty Accept Header
+Microsoft_DefaultRuleSet_2.1,PROTOCOL-ENFORCEMENT,920311,Request Has an Empty Accept Header
+Microsoft_DefaultRuleSet_2.1,PROTOCOL-ENFORCEMENT,920320,Missing User Agent Header
+Microsoft_DefaultRuleSet_2.1,PROTOCOL-ENFORCEMENT,920330,Empty User Agent Header
+Microsoft_DefaultRuleSet_2.1,PROTOCOL-ENFORCEMENT,920340,"Request Containing Content, but Missing Content-Type header"
+Microsoft_DefaultRuleSet_2.1,PROTOCOL-ENFORCEMENT,920341,Request Containing Content Requires Content-Type header
+Microsoft_DefaultRuleSet_2.1,PROTOCOL-ENFORCEMENT,920350,Host header is a numeric IP address
+Microsoft_DefaultRuleSet_2.1,PROTOCOL-ENFORCEMENT,920420,Request content type is not allowed by policy
+Microsoft_DefaultRuleSet_2.1,PROTOCOL-ENFORCEMENT,920430,HTTP protocol version is not allowed by policy
+Microsoft_DefaultRuleSet_2.1,PROTOCOL-ENFORCEMENT,920440,URL file extension is restricted by policy
+Microsoft_DefaultRuleSet_2.1,PROTOCOL-ENFORCEMENT,920450,HTTP header is restricted by policy
+Microsoft_DefaultRuleSet_2.1,PROTOCOL-ENFORCEMENT,920470,Illegal Content-Type header
+Microsoft_DefaultRuleSet_2.1,PROTOCOL-ENFORCEMENT,920480,Request content type charset is not allowed by policy
+Microsoft_DefaultRuleSet_2.1,PROTOCOL-ENFORCEMENT,920500,Attempt to access a backup or working file
+Microsoft_DefaultRuleSet_2.1,NODEJS,934100,Node.js Injection Attack
+Microsoft_DefaultRuleSet_2.1,General,200002,Failed to parse request body.
+Microsoft_DefaultRuleSet_2.1,General,200003,Multipart request body failed strict validation
+Microsoft_DefaultRuleSet_2.1,MS-ThreatIntel-WebShells,99005002,Web Shell Interaction Attempt (POST)
+Microsoft_DefaultRuleSet_2.1,MS-ThreatIntel-WebShells,99005003,Web Shell Upload Attempt (POST) - CHOPPER PHP
+Microsoft_DefaultRuleSet_2.1,MS-ThreatIntel-WebShells,99005004,Web Shell Upload Attempt (POST) - CHOPPER ASPX
+Microsoft_DefaultRuleSet_2.1,MS-ThreatIntel-WebShells,99005005,Web Shell Interaction Attempt
+Microsoft_DefaultRuleSet_2.1,MS-ThreatIntel-WebShells,99005006,Spring4Shell Interaction Attempt
+Microsoft_DefaultRuleSet_2.1,MS-ThreatIntel-AppSec,99030001,Path Traversal Evasion in Headers (/.././../)
+Microsoft_DefaultRuleSet_2.1,MS-ThreatIntel-AppSec,99030002,Path Traversal Evasion in Request Body (/.././../)
+Microsoft_DefaultRuleSet_2.1,MS-ThreatIntel-CVEs,99001001,Attempted F5 tmui (CVE-2020-5902) REST API Exploitation with known credentials
+Microsoft_DefaultRuleSet_2.1,MS-ThreatIntel-CVEs,99001002,Attempted Citrix NSC_USER directory traversal (CVE-2019-19781)
+Microsoft_DefaultRuleSet_2.1,MS-ThreatIntel-CVEs,99001003,Attempted Atlassian Confluence Widget Connector exploitation (CVE-2019-3396)
+Microsoft_DefaultRuleSet_2.1,MS-ThreatIntel-CVEs,99001004,Attempted Pulse Secure custom template exploitation (CVE-2020-8243)
+Microsoft_DefaultRuleSet_2.1,MS-ThreatIntel-CVEs,99001005,Attempted SharePoint type converter exploitation (CVE-2020-0932)
+Microsoft_DefaultRuleSet_2.1,MS-ThreatIntel-CVEs,99001006,Attempted Pulse Connect directory traversal (CVE-2019-11510)
+Microsoft_DefaultRuleSet_2.1,MS-ThreatIntel-CVEs,99001007,Attempted Junos OS J-Web local file inclusion (CVE-2020-1631)
+Microsoft_DefaultRuleSet_2.1,MS-ThreatIntel-CVEs,99001008,Attempted Fortinet path traversal (CVE-2018-13379)
+Microsoft_DefaultRuleSet_2.1,MS-ThreatIntel-CVEs,99001009,Attempted Apache struts ognl injection (CVE-2017-5638)
+Microsoft_DefaultRuleSet_2.1,MS-ThreatIntel-CVEs,99001010,Attempted Apache struts ognl injection (CVE-2017-12611)
+Microsoft_DefaultRuleSet_2.1,MS-ThreatIntel-CVEs,99001011,Attempted Oracle WebLogic path traversal (CVE-2020-14882)
+Microsoft_DefaultRuleSet_2.1,MS-ThreatIntel-CVEs,99001012,Attempted Telerik WebUI insecure deserialization exploitation (CVE-2019-18935)
+Microsoft_DefaultRuleSet_2.1,MS-ThreatIntel-CVEs,99001013,Attempted SharePoint insecure XML deserialization (CVE-2019-0604)
+Microsoft_DefaultRuleSet_2.1,MS-ThreatIntel-CVEs,99001014,Attempted Spring Cloud routing-expression injection (CVE-2022-22963)
+Microsoft_DefaultRuleSet_2.1,MS-ThreatIntel-CVEs,99001015,Attempted Spring Framework unsafe class object exploitation (CVE-2022-22965)
+Microsoft_DefaultRuleSet_2.1,MS-ThreatIntel-CVEs,99001016,Attempted Spring Cloud Gateway Actuator injection (CVE-2022-22947)
+Microsoft_DefaultRuleSet_2.1,MS-ThreatIntel-SQLI,99031001,SQL Injection Attack: Common Injection Testing Detected
+Microsoft_DefaultRuleSet_2.1,MS-ThreatIntel-SQLI,99031002,SQL Comment Sequence Detected.
+Microsoft_DefaultRuleSet_2.1,MS-ThreatIntel-SQLI,99031003,SQL Injection Attack
+Microsoft_DefaultRuleSet_2.1,MS-ThreatIntel-SQLI,99031004,Detects basic SQL authentication bypass attempts 2/3
