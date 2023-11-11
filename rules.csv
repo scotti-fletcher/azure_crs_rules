@@ -1,4 +1,6 @@
 rule_set,category,rule_id,description
+OWASP_3.2,Anomaly Detection,980130,Inbound Anomaly Score Exceeded
+OWASP_3.2,Anomaly Detection,949110,Inbound Anomaly Score Exceeded
 OWASP_3.2,General,200002,Failed to Parse Request Body.
 OWASP_3.2,General,200003,Multipart Request Body Strict Validation.
 OWASP_3.2,General,200004,Possible Multipart Unmatched Boundary.
@@ -184,6 +186,8 @@ OWASP_3.2,Known-CVEs,800110,Spring4Shell Interaction Attempt
 OWASP_3.2,Known-CVEs,800111,Attempted Spring Cloud routing-expression injection - CVE-2022-22963
 OWASP_3.2,Known-CVEs,800112,Attempted Spring Framework unsafe class object exploitation - CVE-2022-22965
 OWASP_3.2,Known-CVEs,800113,Attempted Spring Cloud Gateway Actuator injection - CVE-2022-22947
+OWASP_3.1,Anomaly Detection,980130,Inbound Anomaly Score Exceeded
+OWASP_3.1,Anomaly Detection,949110,Inbound Anomaly Score Exceeded
 OWASP_3.1,General,200004,Possible Multipart Unmatched Boundary.
 OWASP_3.1,REQUEST-911-METHOD-ENFORCEMENT,911100,Method is not allowed by policy
 OWASP_3.1,REQUEST-913-SCANNER-DETECTION,913100,Found User-Agent associated with security scanner
@@ -365,6 +369,8 @@ OWASP_3.1,Known-CVEs,800110,Spring4Shell Interaction Attempt
 OWASP_3.1,Known-CVEs,800111,Attempted Spring Cloud routing-expression injection - CVE-2022-22963
 OWASP_3.1,Known-CVEs,800112,Attempted Spring Framework unsafe class object exploitation - CVE-2022-22965
 OWASP_3.1,Known-CVEs,800113,Attempted Spring Cloud Gateway Actuator injection - CVE-2022-22947
+OWASP_3.0,Anomaly Detection,980130,Inbound Anomaly Score Exceeded
+OWASP_3.0,Anomaly Detection,949110,Inbound Anomaly Score Exceeded
 OWASP_3.0,General,200004,Possible Multipart Unmatched Boundary.
 OWASP_3.0,REQUEST-911-METHOD-ENFORCEMENT,911100,Method is not allowed by policy
 OWASP_3.0,REQUEST-913-SCANNER-DETECTION,913100,Found User-Agent associated with security scanner
@@ -525,6 +531,8 @@ OWASP_3.0,Known-CVEs,800110,Spring4Shell Interaction Attempt
 OWASP_3.0,Known-CVEs,800111,Attempted Spring Cloud routing-expression injection - CVE-2022-22963
 OWASP_3.0,Known-CVEs,800112,Attempted Spring Framework unsafe class object exploitation - CVE-2022-22965
 OWASP_3.0,Known-CVEs,800113,Attempted Spring Cloud Gateway Actuator injection - CVE-2022-22947
+OWASP_2.2.9,Anomaly Detection,980130,Inbound Anomaly Score Exceeded
+OWASP_2.2.9,Anomaly Detection,949110,Inbound Anomaly Score Exceeded
 OWASP_2.2.9,General,200004,Possible Multipart Unmatched Boundary.
 OWASP_2.2.9,crs_20_protocol_violations,950107,URL Encoding Abuse Attack Attempt
 OWASP_2.2.9,crs_20_protocol_violations,950108,URL Encoding Abuse Attack Attempt
@@ -770,7 +778,11 @@ OWASP_2.2.9,crs_45_trojans,950110,Backdoor access
 OWASP_2.2.9,crs_45_trojans,950921,Backdoor access
 OWASP_2.2.9,crs_49_inbound_blocking,981175,Inbound Attack Targeting OSVDB Flagged Resource.
 OWASP_2.2.9,crs_49_inbound_blocking,981176,"Inbound Anomaly Score Exceeded (Total Score: %{TX.ANOMALY_SCORE}, SQLi=%{TX.SQL_INJECTION_SCORE}, XSS=%{TX.XSS_SCORE}): Last Matched Message: %{tx.msg}"
+Microsoft_BotManagerRuleSet_0.1,Anomaly Detection,980130,Inbound Anomaly Score Exceeded
+Microsoft_BotManagerRuleSet_0.1,Anomaly Detection,949110,Inbound Anomaly Score Exceeded
 Microsoft_BotManagerRuleSet_0.1,KnownBadBots,1,Malicious Bots
+Microsoft_BotManagerRuleSet_1.0,Anomaly Detection,980130,Inbound Anomaly Score Exceeded
+Microsoft_BotManagerRuleSet_1.0,Anomaly Detection,949110,Inbound Anomaly Score Exceeded
 Microsoft_BotManagerRuleSet_1.0,BadBots,100100,Malicious bots detected by threat intelligence
 Microsoft_BotManagerRuleSet_1.0,BadBots,100200,Malicious bots that have falsified their identity
 Microsoft_BotManagerRuleSet_1.0,GoodBots,200100,Search engine crawlers
@@ -782,6 +794,8 @@ Microsoft_BotManagerRuleSet_1.0,UnknownBots,300400,Service agents
 Microsoft_BotManagerRuleSet_1.0,UnknownBots,300500,Site health monitoring services
 Microsoft_BotManagerRuleSet_1.0,UnknownBots,300600,Unknown bots detected by threat intelligence
 Microsoft_BotManagerRuleSet_1.0,UnknownBots,300700,Other bots
+Microsoft_DefaultRuleSet_2.1,Anomaly Detection,980130,Inbound Anomaly Score Exceeded
+Microsoft_DefaultRuleSet_2.1,Anomaly Detection,949110,Inbound Anomaly Score Exceeded
 Microsoft_DefaultRuleSet_2.1,LFI,930100,Path Traversal Attack (/../)
 Microsoft_DefaultRuleSet_2.1,LFI,930110,Path Traversal Attack (/../)
 Microsoft_DefaultRuleSet_2.1,LFI,930120,OS File Access Attempt
